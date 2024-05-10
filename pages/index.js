@@ -8,6 +8,7 @@ import {
   Paper,
   Divider,
   Avatar,
+  IconButton,
 } from "@mui/material";
 import Marquee from "react-fast-marquee";
 
@@ -116,6 +117,7 @@ export default function Home() {
               justifyContent: "center",
               background: "",
               minHeight: { xs: "50vh", lg: "80vh" },
+              margin: "21px 0",
             }}
           >
             <Box
@@ -192,21 +194,28 @@ export default function Home() {
                   width: "100%",
                 }}
               >
-                <Button
-                  variant="outlined"
-                  // className="heartbeat"
-                  sx={{
-                    borderRadius: "21px",
-                    color: "#221E30",
-                    border: "1px dashed #221E30",
-                    // "&:hover": {
-                    //   color: "#221E30",
-                    //   background: "white",
-                    // },
-                  }}
-                >
-                  Get Involved Now
-                </Button>
+                <Box className="btn-container">
+                  {/* <button className='btn btn--shockwave is-active'>
+    Shockwave
+  </button> */}
+
+                  <Button
+                    className="btn btn--shockwave is-active"
+                    variant="outlined"
+                    // className="heartbeat"
+                    sx={{
+                      borderRadius: "21px",
+                      color: "#221E30",
+                      border: "1px dashed #221E30",
+                      // "&:hover": {
+                      //   color: "#221E30",
+                      //   background: "white",
+                      // },
+                    }}
+                  >
+                    Get Involved Now
+                  </Button>
+                </Box>
               </Box>
             </Box>
           </Grid>
@@ -246,7 +255,7 @@ export default function Home() {
             <Paper
               elevation={2}
               sx={{
-                height: "150px",
+                minHeight: "150px",
                 width: { xs: "65%", lg: "500px" },
                 display: "flex",
                 alignItems: "center",
@@ -461,8 +470,12 @@ export default function Home() {
                 />
               </Box>
             </Box>
-            {[1, 2, 3, 4, 5].map((item, index) => (
-              <Event key={item} reversed={index % 2 === 0} />
+            {[1, 2, 3, 4].map((item, index) => (
+              <Event
+                key={item}
+                color={colors[index]}
+                reversed={index % 2 === 0}
+              />
             ))}
           </Grid>
 
@@ -557,6 +570,187 @@ export default function Home() {
               </Marquee>
             </Box>
           </Grid>
+          <Grid item xs={12}>
+            <Box className="footer">
+              <Box className="container">
+                <Grid container sx={{ p: "60px" }} className="row">
+                  <Grid
+                    item
+                    xs={12}
+                    lg={4}
+                    className="col-lg-4 col-sm-4 col-xs-12"
+                  >
+                    <Box className="single_footer">
+                      <h4>ITSA</h4>
+                      <ul>
+                        <li>
+                          <a href="#">Home</a>
+                        </li>
+                        <li>
+                          <a href="#">Events</a>
+                        </li>
+                        <li>
+                          <a href="#">Resources </a>
+                        </li>
+                        <li>
+                          <a href="#">About US</a>
+                        </li>
+                        <li>
+                          <a href="#">Projects</a>
+                        </li>
+                      </ul>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    lg={4}
+                    className="col-md-4 col-sm-4 col-xs-12"
+                  >
+                    <Box className="single_footer single_footer_address">
+                      <h4>Helper</h4>
+                      <ul>
+                        <li>
+                          <a href="#">Committe</a>
+                        </li>
+                        <li>
+                          <a href="#">Blog & News</a>
+                        </li>
+                        <li>
+                          <a href="#">Contact </a>
+                        </li>
+                        <li>
+                          <a href="#">Frequently Aked Questions</a>
+                        </li>
+                        <li>
+                          <a href="#">Join Us</a>
+                        </li>
+                      </ul>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    lg={4}
+                    className="col-md-4 col-sm-4 col-xs-12"
+                  >
+                    <div className="single_footer single_footer_address">
+                      <h4>Subscribe today</h4>
+                      <div className="signup_form">
+                        <form action="#" className="subscribe">
+                          <inputextField
+                            type="text"
+                            className="subscribe__input"
+                            placeholder="Enter Email Address"
+                          />
+                          <button type="button" className="subscribe__btn">
+                            <i className="fas fa-paper-plane"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div className="social_profile">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <IconButton
+                              sx={{
+                                border: "1px solid white",
+                                margin: "0 6px",
+                              }}
+                            >
+                              <Box
+                                sx={{
+                                  width: "35px",
+                                  height: "35px",
+                                  borderRadius: "25%",
+                                  // border: "1px solid white",
+                                  backgroundImage:
+                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                                  backgroundSize: "contain",
+                                  backgroundRepeat: "no-repeat",
+                                  backgroundPosition: "center",
+                                  filter: "invert(1)",
+                                  "&:hover": {
+                                    background: "#ff3666",
+                                  },
+                                }}
+                              />
+                            </IconButton>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <IconButton
+                              sx={{
+                                border: "1px solid white",
+                                margin: "0 6px",
+                              }}
+                            >
+                              <Box
+                                sx={{
+                                  width: "35px",
+                                  height: "35px",
+                                  borderRadius: "25%",
+                                  // border: "1px solid white",
+                                  backgroundImage:
+                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                                  backgroundSize: "contain",
+                                  backgroundRepeat: "no-repeat",
+                                  backgroundPosition: "center",
+                                  filter: "invert(1)",
+                                  "&:hover": {
+                                    background: "#ff3666",
+                                  },
+                                }}
+                              />
+                            </IconButton>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <IconButton
+                              sx={{
+                                border: "1px solid white",
+                                margin: "0 6px",
+                              }}
+                            >
+                              <Box
+                                sx={{
+                                  width: "35px",
+                                  height: "35px",
+                                  borderRadius: "25%",
+                                  // border: "1px solid white",
+                                  backgroundImage:
+                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                                  backgroundSize: "contain",
+                                  backgroundRepeat: "no-repeat",
+                                  backgroundPosition: "center",
+                                  filter: "invert(1)",
+                                  "&:hover": {
+                                    background: "#ff3666",
+                                  },
+                                }}
+                              />
+                            </IconButton>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Box className="row">
+                      <Box className="col-lg-12 col-sm-12 col-xs-12">
+                        <p className="copyright">
+                          Copyright © 2024 <a href="#">Atomus Dev</a>.
+                        </p>
+                      </Box>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </Box>
+            </Box>
+          </Grid>
         </Grid>
       </Box>
     </Box>
@@ -569,21 +763,21 @@ const Navbar = () => {
       <Grid container>
         <Grid
           item
-          sx={{ background: "", height: "", padding: "" }}
+          sx={{ background: "", height: "", padding: "0 12px" }}
           // xs={12}
           xs={4}
         >
           <Box
             sx={{
               height: { xs: "75px", lg: "75px" },
-              width: { xs: "150px", lg: "200px" },
+              width: { xs: "75px", md: "180px" },
               backgroundImage:
                 "url('https://www.ufs.ac.za/images/librariesprovider5/ufs_redesign_2021/ufsheaderlogo.svg?sfvrsn=15b37820_2')",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "left",
               // scale: "0.8",
-              margin: { xs: "0 auto", lg: "0 0 0 21px" },
+              margin: { xs: "0", lg: "0 0 0 21px" },
             }}
           />
         </Grid>
@@ -606,15 +800,16 @@ const Navbar = () => {
               padding: "0",
               display: "flex",
               justifyContent: { xs: "flex-end", lg: "flex-end" },
-              alignItems: "center",
-              background: "",
+              // alignItems: "center",
+              // background: "red",
             }}
           >
             <Box
               sx={{
                 display: "flex",
-                justifyContent: " space-between",
+                justifyContent: { xs: "flex-end", lg: " space-between" },
                 alignItems: "center",
+                // background: "yellow",
               }}
             >
               <Typography
@@ -636,34 +831,36 @@ const Navbar = () => {
               >
                 <TextField
                   sx={{
-                    width: { xs: "100px", md: "200px", lg: "300px" },
-                    display: { xs: "none", md: "flex" },
+                    width: { xs: "75%", md: "200px", lg: "300px" },
+                    display: { xs: "none", sm: "none", md: "flex" },
                     // scale: "0.9",
                   }}
                 />
-                <Button
-                  sx={{
-                    width: "35px",
-                    height: "35px",
-                    // backgroundImage: 'url("/sea.gif")',
-                    backgroundImage:
-                      'url("https://img.icons8.com/?size=50&id=e4NkZ7kWAD7f&format=png")',
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    "&:hover": {
-                      backgroundColor: "#7995ae",
-                    },
-                    // border: "1px solid blue",
-                  }}
-                ></Button>
+                <IconButton>
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: { xs: "25px", lg: "35px" },
+                      // backgroundImage: 'url("/sea.gif")',
+                      backgroundImage:
+                        'url("https://img.icons8.com/?size=50&id=e4NkZ7kWAD7f&format=png")',
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      "&:hover": {
+                        backgroundColor: "#7995ae",
+                      },
+                      // border: "1px solid blue",
+                    }}
+                  ></Box>
+                </IconButton>
               </Box>
             </Box>
           </Stack>
         </Grid>
 
         <Grid item xs={12} sx={{ height: "", background: "" }}>
-          <Box sx={{ width: { xs: "75%", lg: "50%" }, margin: "0 auto" }}>
+          <Box sx={{ width: { xs: "85%", lg: "50%" }, margin: "0 auto" }}>
             <Marquee gradient={true}>
               <Typography
                 sx={{
@@ -679,7 +876,19 @@ const Navbar = () => {
             </Marquee>
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{ height: "5vh", background: "#221E30" }}></Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            height: "5vh",
+            background: "#221E30",
+            textAlign: "center",
+            color: "#eee",
+            fontWeight: "600",
+          }}
+        >
+          {/* {"itsa@gmail.com"} */}
+        </Grid>
         <Grid
           item
           xs={12}
@@ -693,14 +902,30 @@ const Navbar = () => {
         >
           <Box
             sx={{
-              width: "180px",
+              width: "75px",
               height: "75px",
               backgroundImage: 'url("/reps/2.png")',
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
+              backgroundPosition: { xs: "left" },
             }}
           />
+
+          <IconButton sx={{ display: { xs: "flex", lg: "none" } }}>
+            <Box
+              sx={{
+                width: "35px",
+                height: { xs: "35px", lg: "35px" },
+                // backgroundImage: 'url("/sea.gif")',
+                backgroundImage:
+                  'url("https://img.icons8.com/?size=50&id=120374&format=png")',
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            ></Box>
+          </IconButton>
+
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
@@ -719,7 +944,17 @@ const Navbar = () => {
             <Typography sx={{ fontSize: "14px" }}>Contact</Typography>
             <Typography sx={{ fontSize: "14px" }}>FAQ</Typography>
             <Typography sx={{ fontSize: "14px" }}>Gallery</Typography>
-            <Button sx={{ color: "#eee", background: "#221E30" }}>JOIN</Button>
+            <Box className="btn-container">
+              {/* <button className='btn btn--shockwave is-active'>
+    Shockwave
+  </button> */}
+              <Button
+                className="btn btn--shockwave is-active"
+                sx={{ color: "#eee", background: "#221E30" }}
+              >
+                JOIN
+              </Button>
+            </Box>
           </Box>
         </Grid>
       </Grid>
@@ -788,7 +1023,7 @@ const Representative = ({ rep }) => {
   );
 };
 
-const Event = ({ reversed }) => {
+const Event = ({ reversed, color }) => {
   return (
     <Box
       sx={{
@@ -833,7 +1068,7 @@ const Event = ({ reversed }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                border: "10px solid #221E30",
+                border: `10px solid ${color}`,
               }}
             >
               <Typography
@@ -841,8 +1076,8 @@ const Event = ({ reversed }) => {
                 sx={{
                   textAlign: { xs: "center" },
                   margin: { xs: "8px auto", lg: "0" },
-                  color: "#221E30",
-
+                  color: color,
+                  fontWeight: "600",
                   // color: "white",
                   fontSize: "20px",
                 }}
@@ -858,7 +1093,7 @@ const Event = ({ reversed }) => {
                 alignItems: "center",
                 minHeight: "150px",
                 padding: "21px",
-                background: "#221E30",
+                background: color,
                 justifyContent: "center",
               }}
             >
@@ -884,7 +1119,7 @@ const Event = ({ reversed }) => {
           xs={12}
           md={6}
           sx={{
-            background: "#221E30",
+            background: color,
             minHeight: "150px",
             padding: "21px",
             // border: "1px solid #eee",
@@ -1004,3 +1239,11 @@ const reps = [
     role: "Secretary",
   },
 ];
+
+const addtionalColors = {
+  yellow: "#ffbe25",
+  green: "#9bc90e",
+  purple: "#b500ac",
+  red: "#e64b23",
+};
+const colors = ["#ffbe25", "#9bc90e", "#b500ac", "#e64b23"];
