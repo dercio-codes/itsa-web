@@ -207,6 +207,7 @@ export default function Home() {
                       borderRadius: "21px",
                       color: "#221E30",
                       border: "1px dashed #221E30",
+                      padding: "12px !important",
                       // "&:hover": {
                       //   color: "#221E30",
                       //   background: "white",
@@ -570,6 +571,171 @@ export default function Home() {
               </Marquee>
             </Box>
           </Grid>
+          <Grid item xs={12} sx={{ minHeight: "100vh", padding: "32px" }}>
+            <Typography
+              className="header-font"
+              sx={{
+                textAlign: { xs: "center" },
+                margin: { xs: "12px auto", lg: "0" },
+                color: "#221E30",
+                // color: "white",
+                fontSize: { xs: "30px", lg: "40px" },
+              }}
+            >
+              Contact Us{" "}
+            </Typography>
+            <Typography
+              // className="header-font"
+              sx={{
+                textAlign: { xs: "center" },
+                margin: { xs: "2px auto", lg: "0" },
+                color: "#221E30",
+                // color: "white",
+                fontSize: "16px",
+              }}
+            >
+              Contact Us For More Information and We will reach out to you with
+              assistance.{" "}
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: { xs: "75%", lg: "50%" },
+                margin: "21px auto",
+                // background: "red",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "20px",
+                  height: "20px",
+                  borderRadius: "50%",
+                  background: "#221E30",
+                  opacity: "0.5",
+                }}
+              />
+              <Divider
+                sx={{ background: "#221E30", width: "70%", opacity: "0.5" }}
+              />
+              <Box
+                sx={{
+                  width: "20px",
+                  height: "20px",
+                  borderRadius: "50%",
+                  background: "#221E30",
+                  opacity: "0.5",
+                }}
+              />
+            </Box>
+            <Grid container>
+              <Grid item xs={12} lg={6}>
+                <Box
+                  sx={{
+                    height: "350px",
+                    width: "350px",
+                    backgroundImage: "url('/transistor-support-person.gif')",
+                    // "url('https://ouch-cdn2.icons8.com/2ovcKXYBoyvHlUuBgcgcwfroV2E2pqoZL6AlsNzA7Lw/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvODYv/NTUxN2E0NzEtNTBj/My00ZTc4LTk2ZjQt/ODIyNTJmZjgzMmFm/LnN2Zw.gif')",
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    margin: "0 auto",
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                <Grid container>
+                  <Grid item xs={12} sm={6} sx={{ padding: "0 12px 0 0" }}>
+                    <Typography
+                      // className="header-font"
+                      sx={{
+                        color: "#221E30",
+                        // color: "white",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Name
+                    </Typography>
+                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                    <Typography
+                      // className="header-font"
+                      sx={{
+                        color: "#221E30",
+                        // color: "white",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Surname:
+                    </Typography>
+                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  </Grid>
+                  <Grid item xs={12} sm={6} sx={{ padding: "0 0 0 12px" }}>
+                    <Typography
+                      // className="header-font"
+                      sx={{
+                        color: "#221E30",
+                        // color: "white",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Email:
+                    </Typography>
+                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                    <Typography
+                      // className="header-font"
+                      sx={{
+                        color: "#221E30",
+                        // color: "white",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Tel:
+                    </Typography>
+                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  </Grid>
+                </Grid>
+                <Typography
+                  // className="header-font"
+                  sx={{
+                    color: "#221E30",
+                    // color: "white",
+                    fontSize: "16px",
+                  }}
+                >
+                  Query:
+                </Typography>
+                <TextField
+                  fullWidth={true}
+                  multiline
+                  rows={5}
+                  sx={{ margin: "12px 0" }}
+                />
+                <Box
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  <Button
+                    sx={{
+                      background: "#221E30",
+                      color: "white",
+                      padding: "16px 18px",
+                      "&:hover": {
+                        color: "#221E30",
+                        background: "white",
+                        border: "1px solid #221E30",
+                      },
+                    }}
+                  >
+                    Submit
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
+          </Grid>
+
           <Grid item xs={12}>
             <Box className="footer">
               <Box className="container">
@@ -638,7 +804,7 @@ export default function Home() {
                       <h4>Subscribe today</h4>
                       <div className="signup_form">
                         <form action="#" className="subscribe">
-                          <inputextField
+                          <input
                             type="text"
                             className="subscribe__input"
                             placeholder="Enter Email Address"
