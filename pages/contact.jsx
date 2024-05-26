@@ -383,7 +383,7 @@ export const Contact = () => {
                 }}
               />
 
-              <Box id="contact-mail">
+{/*               <Box id="contact-mail">
                 <Mailchimp
                   action="https://gmail.us21.list-manage.com/subscribe/post?u=1da28cc5db60fdae621ba0174&amp;id=3b386a0117&amp;f_id=00ddb7e1f0"
                   fields={[
@@ -395,7 +395,7 @@ export const Contact = () => {
                     },
                   ]}
                 />
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         </Grid>
