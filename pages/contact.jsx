@@ -303,7 +303,6 @@ export const Contact = () => {
             }}
           />
           <Button
-{/*             onClick={handleSubmit} */}
             className="button-89"
             sx={{ background: "transparent", width: "75%" }}
             type="button"
