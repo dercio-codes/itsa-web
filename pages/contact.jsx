@@ -28,58 +28,58 @@ export const Contact = () => {
   };
 
   // const handleSubmit = ()  =>  console.log(query)
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsProcessing(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setIsProcessing(true);
 
-    const queryValues = Object.values(query);
+  //   const queryValues = Object.values(query);
 
-    if (queryValues.includes("")) {
-      toast.warning("Please fill in all fields.", {
-        theme: "dark",
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-      });
-      setIsProcessing(false);
-    } else {
-      axios
-        .post("/api/contact", query)
-        .then((res) => {
-          if (res.data.message == "MAIL_SENT") {
-            toast.success("Email Succesfully sent to Misguided.", {
-              // theme: "dark",
-              position: "top-right",
-              icon: "🚀",
-              autoClose: 5000,
-              hideProgressBar: false,
-            });
+  //   if (queryValues.includes("")) {
+  //     toast.warning("Please fill in all fields.", {
+  //       theme: "dark",
+  //       position: "top-right",
+  //       autoClose: 5000,
+  //       hideProgressBar: false,
+  //     });
+  //     setIsProcessing(false);
+  //   } else {
+  //     axios
+  //       .post("/api/contact", query)
+  //       .then((res) => {
+  //         if (res.data.message == "MAIL_SENT") {
+  //           toast.success("Email Succesfully sent to Misguided.", {
+  //             // theme: "dark",
+  //             position: "top-right",
+  //             icon: "🚀",
+  //             autoClose: 5000,
+  //             hideProgressBar: false,
+  //           });
 
-            setquery({
-              name: "",
-              tel: "",
-              email: "",
-              query: "",
-            });
+  //           setquery({
+  //             name: "",
+  //             tel: "",
+  //             email: "",
+  //             query: "",
+  //           });
 
-            setIsProcessing(false);
-          } else {
-            toast.error("Error query to Atomus.", {
-              theme: "dark",
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-            });
+  //           setIsProcessing(false);
+  //         } else {
+  //           toast.error("Error query to Atomus.", {
+  //             theme: "dark",
+  //             position: "top-right",
+  //             autoClose: 5000,
+  //             hideProgressBar: false,
+  //           });
 
-            setIsProcessing(false);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-          setIsProcessing(false);
-        });
-    }
-  };
+  //           setIsProcessing(false);
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         setIsProcessing(false);
+  //       });
+  //   }
+  // };
 
   return (
     <Box
@@ -303,7 +303,7 @@ export const Contact = () => {
             }}
           />
           <Button
-            onClick={handleSubmit}
+{/*             onClick={handleSubmit} */}
             className="button-89"
             sx={{ background: "transparent", width: "75%" }}
             type="button"
