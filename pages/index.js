@@ -571,359 +571,15 @@ export default function Home() {
               </Marquee>
             </Box>
           </Grid>
-          <Grid item xs={12} sx={{ minHeight: "100vh", padding: "32px" }}>
-            <Typography
-              className="header-font"
-              sx={{
-                textAlign: { xs: "center" },
-                margin: { xs: "12px auto", lg: "0" },
-                color: "#221E30",
-                // color: "white",
-                fontSize: { xs: "30px", lg: "40px" },
-              }}
-            >
-              Contact Us{" "}
-            </Typography>
-            <Typography
-              // className="header-font"
-              sx={{
-                textAlign: { xs: "center" },
-                margin: { xs: "2px auto", lg: "0" },
-                color: "#221E30",
-                // color: "white",
-                fontSize: "16px",
-              }}
-            >
-              Contact Us For More Information and We will reach out to you with
-              assistance.{" "}
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: { xs: "75%", lg: "50%" },
-                margin: "21px auto",
-                // background: "red",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#221E30",
-                  opacity: "0.5",
-                }}
-              />
-              <Divider
-                sx={{ background: "#221E30", width: "70%", opacity: "0.5" }}
-              />
-              <Box
-                sx={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#221E30",
-                  opacity: "0.5",
-                }}
-              />
-            </Box>
-            <Grid container>
-              <Grid item xs={12} lg={6}>
-                <Box
-                  sx={{
-                    height: "350px",
-                    width: "350px",
-                    backgroundImage: "url('/transistor-support-person.gif')",
-                    // "url('https://ouch-cdn2.icons8.com/2ovcKXYBoyvHlUuBgcgcwfroV2E2pqoZL6AlsNzA7Lw/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvODYv/NTUxN2E0NzEtNTBj/My00ZTc4LTk2ZjQt/ODIyNTJmZjgzMmFm/LnN2Zw.gif')",
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    margin: "0 auto",
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} lg={6}>
-                <Grid container>
-                  <Grid item xs={12} sm={6} sx={{ padding: "0 12px 0 0" }}>
-                    <Typography
-                      // className="header-font"
-                      sx={{
-                        color: "#221E30",
-                        // color: "white",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Name
-                    </Typography>
-                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
-                    <Typography
-                      // className="header-font"
-                      sx={{
-                        color: "#221E30",
-                        // color: "white",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Surname:
-                    </Typography>
-                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
-                  </Grid>
-                  <Grid item xs={12} sm={6} sx={{ padding: "0 0 0 12px" }}>
-                    <Typography
-                      // className="header-font"
-                      sx={{
-                        color: "#221E30",
-                        // color: "white",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Email:
-                    </Typography>
-                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
-                    <Typography
-                      // className="header-font"
-                      sx={{
-                        color: "#221E30",
-                        // color: "white",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Tel:
-                    </Typography>
-                    <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
-                  </Grid>
-                </Grid>
-                <Typography
-                  // className="header-font"
-                  sx={{
-                    color: "#221E30",
-                    // color: "white",
-                    fontSize: "16px",
-                  }}
-                >
-                  Query:
-                </Typography>
-                <TextField
-                  fullWidth={true}
-                  multiline
-                  rows={5}
-                  sx={{ margin: "12px 0" }}
-                />
-                <Box
-                  sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "flex-end",
-                  }}
-                >
-                  <Button
-                    sx={{
-                      background: "#221E30",
-                      color: "white",
-                      padding: "16px 18px",
-                      "&:hover": {
-                        color: "#221E30",
-                        background: "white",
-                        border: "1px solid #221E30",
-                      },
-                    }}
-                  >
-                    Submit
-                  </Button>
-                </Box>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12}>
-            <Box className="footer">
-              <Box className="container">
-                <Grid container sx={{ p: "60px" }} className="row">
-                  <Grid
-                    item
-                    xs={12}
-                    lg={4}
-                    className="col-lg-4 col-sm-4 col-xs-12"
-                  >
-                    <Box className="single_footer">
-                      <h4>ITSA</h4>
-                      <ul>
-                        <li>
-                          <a href="#">Home</a>
-                        </li>
-                        <li>
-                          <a href="#">Events</a>
-                        </li>
-                        <li>
-                          <a href="#">Resources </a>
-                        </li>
-                        <li>
-                          <a href="#">About US</a>
-                        </li>
-                        <li>
-                          <a href="#">Projects</a>
-                        </li>
-                      </ul>
-                    </Box>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    lg={4}
-                    className="col-md-4 col-sm-4 col-xs-12"
-                  >
-                    <Box className="single_footer single_footer_address">
-                      <h4>Helper</h4>
-                      <ul>
-                        <li>
-                          <a href="#">Committe</a>
-                        </li>
-                        <li>
-                          <a href="#">Blog & News</a>
-                        </li>
-                        <li>
-                          <a href="#">Contact </a>
-                        </li>
-                        <li>
-                          <a href="#">Frequently Aked Questions</a>
-                        </li>
-                        <li>
-                          <a href="#">Join Us</a>
-                        </li>
-                      </ul>
-                    </Box>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    lg={4}
-                    className="col-md-4 col-sm-4 col-xs-12"
-                  >
-                    <div className="single_footer single_footer_address">
-                      <h4>Subscribe today</h4>
-                      <div className="signup_form">
-                        <form action="#" className="subscribe">
-                          <input
-                            type="text"
-                            className="subscribe__input"
-                            placeholder="Enter Email Address"
-                          />
-                          <button type="button" className="subscribe__btn">
-                            <i className="fas fa-paper-plane"></i>
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-                    <div className="social_profile">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <IconButton
-                              sx={{
-                                border: "1px solid white",
-                                margin: "0 6px",
-                              }}
-                            >
-                              <Box
-                                sx={{
-                                  width: "35px",
-                                  height: "35px",
-                                  borderRadius: "25%",
-                                  // border: "1px solid white",
-                                  backgroundImage:
-                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                                  backgroundSize: "contain",
-                                  backgroundRepeat: "no-repeat",
-                                  backgroundPosition: "center",
-                                  filter: "invert(1)",
-                                  "&:hover": {
-                                    background: "#ff3666",
-                                  },
-                                }}
-                              />
-                            </IconButton>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <IconButton
-                              sx={{
-                                border: "1px solid white",
-                                margin: "0 6px",
-                              }}
-                            >
-                              <Box
-                                sx={{
-                                  width: "35px",
-                                  height: "35px",
-                                  borderRadius: "25%",
-                                  // border: "1px solid white",
-                                  backgroundImage:
-                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                                  backgroundSize: "contain",
-                                  backgroundRepeat: "no-repeat",
-                                  backgroundPosition: "center",
-                                  filter: "invert(1)",
-                                  "&:hover": {
-                                    background: "#ff3666",
-                                  },
-                                }}
-                              />
-                            </IconButton>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <IconButton
-                              sx={{
-                                border: "1px solid white",
-                                margin: "0 6px",
-                              }}
-                            >
-                              <Box
-                                sx={{
-                                  width: "35px",
-                                  height: "35px",
-                                  borderRadius: "25%",
-                                  // border: "1px solid white",
-                                  backgroundImage:
-                                    "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                                  backgroundSize: "contain",
-                                  backgroundRepeat: "no-repeat",
-                                  backgroundPosition: "center",
-                                  filter: "invert(1)",
-                                  "&:hover": {
-                                    background: "#ff3666",
-                                  },
-                                }}
-                              />
-                            </IconButton>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Box className="row">
-                      <Box className="col-lg-12 col-sm-12 col-xs-12">
-                        <p className="copyright">
-                          Copyright © 2024 <a href="#">Atomus Dev</a>.
-                        </p>
-                      </Box>
-                    </Box>
-                  </Grid>
-                </Grid>
-              </Box>
-            </Box>
-          </Grid>
+          <ContactForm />
+          <Footer />
         </Grid>
       </Box>
     </Box>
   );
 }
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <Box sx={{ background: "", height: "" }}>
       <Grid container>
@@ -1346,6 +1002,344 @@ const Event = ({ reversed, color }) => {
         </Grid>
       </Grid>
     </Box>
+  );
+};
+
+export const Footer = () => {
+  return (
+    <Grid item xs={12}>
+      <Box className="footer">
+        <Box className="container">
+          <Grid container sx={{ p: "60px" }} className="row">
+            <Grid item xs={12} lg={4} className="col-lg-4 col-sm-4 col-xs-12">
+              <Box className="single_footer">
+                <h4>ITSA</h4>
+                <ul>
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+                  <li>
+                    <a href="#">Resources </a>
+                  </li>
+                  <li>
+                    <a href="#">About US</a>
+                  </li>
+                  <li>
+                    <a href="#">Projects</a>
+                  </li>
+                </ul>
+              </Box>
+            </Grid>
+            <Grid item xs={12} lg={4} className="col-md-4 col-sm-4 col-xs-12">
+              <Box className="single_footer single_footer_address">
+                <h4>Helper</h4>
+                <ul>
+                  <li>
+                    <a href="#">Committe</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog & News</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact </a>
+                  </li>
+                  <li>
+                    <a href="#">Frequently Aked Questions</a>
+                  </li>
+                  <li>
+                    <a href="#">Join Us</a>
+                  </li>
+                </ul>
+              </Box>
+            </Grid>
+            <Grid item xs={12} lg={4} className="col-md-4 col-sm-4 col-xs-12">
+              <div className="single_footer single_footer_address">
+                <h4>Subscribe today</h4>
+                <div className="signup_form">
+                  <form action="#" className="subscribe">
+                    <input
+                      type="text"
+                      className="subscribe__input"
+                      placeholder="Enter Email Address"
+                    />
+                    <button type="button" className="subscribe__btn">
+                      <i className="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div className="social_profile">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <IconButton
+                        sx={{
+                          border: "1px solid white",
+                          margin: "0 6px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: "35px",
+                            height: "35px",
+                            borderRadius: "25%",
+                            // border: "1px solid white",
+                            backgroundImage:
+                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            filter: "invert(1)",
+                            "&:hover": {
+                              background: "#ff3666",
+                            },
+                          }}
+                        />
+                      </IconButton>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <IconButton
+                        sx={{
+                          border: "1px solid white",
+                          margin: "0 6px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: "35px",
+                            height: "35px",
+                            borderRadius: "25%",
+                            // border: "1px solid white",
+                            backgroundImage:
+                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            filter: "invert(1)",
+                            "&:hover": {
+                              background: "#ff3666",
+                            },
+                          }}
+                        />
+                      </IconButton>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <IconButton
+                        sx={{
+                          border: "1px solid white",
+                          margin: "0 6px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: "35px",
+                            height: "35px",
+                            borderRadius: "25%",
+                            // border: "1px solid white",
+                            backgroundImage:
+                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            filter: "invert(1)",
+                            "&:hover": {
+                              background: "#ff3666",
+                            },
+                          }}
+                        />
+                      </IconButton>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Grid>
+            <Grid item xs={12}>
+              <Box className="row">
+                <Box className="col-lg-12 col-sm-12 col-xs-12">
+                  <p className="copyright">
+                    Copyright © 2024 <a href="#">Atomus Dev</a>.
+                  </p>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    </Grid>
+  );
+};
+
+export const ContactForm = () => {
+  return (
+    <Grid item xs={12} sx={{ minHeight: "100vh", padding: "32px" }}>
+      <Typography
+        className="header-font"
+        sx={{
+          textAlign: { xs: "center" },
+          margin: { xs: "12px auto", lg: "0" },
+          color: "#221E30",
+          // color: "white",
+          fontSize: { xs: "30px", lg: "40px" },
+        }}
+      >
+        Contact Us{" "}
+      </Typography>
+      <Typography
+        // className="header-font"
+        sx={{
+          textAlign: { xs: "center" },
+          margin: { xs: "2px auto", lg: "0" },
+          color: "#221E30",
+          // color: "white",
+          fontSize: "16px",
+        }}
+      >
+        Contact Us For More Information and We will reach out to you with
+        assistance.{" "}
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: { xs: "75%", lg: "50%" },
+          margin: "21px auto",
+          // background: "red",
+        }}
+      >
+        <Box
+          sx={{
+            width: "20px",
+            height: "20px",
+            borderRadius: "50%",
+            background: "#221E30",
+            opacity: "0.5",
+          }}
+        />
+        <Divider sx={{ background: "#221E30", width: "70%", opacity: "0.5" }} />
+        <Box
+          sx={{
+            width: "20px",
+            height: "20px",
+            borderRadius: "50%",
+            background: "#221E30",
+            opacity: "0.5",
+          }}
+        />
+      </Box>
+      <Grid container>
+        <Grid item xs={12} lg={6}>
+          <Box
+            sx={{
+              height: "350px",
+              width: "350px",
+              backgroundImage: "url('/transistor-support-person.gif')",
+              // "url('https://ouch-cdn2.icons8.com/2ovcKXYBoyvHlUuBgcgcwfroV2E2pqoZL6AlsNzA7Lw/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvODYv/NTUxN2E0NzEtNTBj/My00ZTc4LTk2ZjQt/ODIyNTJmZjgzMmFm/LnN2Zw.gif')",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              margin: "0 auto",
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <Grid container>
+            <Grid item xs={12} sm={6} sx={{ padding: "0 12px 0 0" }}>
+              <Typography
+                // className="header-font"
+                sx={{
+                  color: "#221E30",
+                  // color: "white",
+                  fontSize: "16px",
+                }}
+              >
+                Name
+              </Typography>
+              <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+              <Typography
+                // className="header-font"
+                sx={{
+                  color: "#221E30",
+                  // color: "white",
+                  fontSize: "16px",
+                }}
+              >
+                Surname:
+              </Typography>
+              <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+            </Grid>
+            <Grid item xs={12} sm={6} sx={{ padding: "0 0 0 12px" }}>
+              <Typography
+                // className="header-font"
+                sx={{
+                  color: "#221E30",
+                  // color: "white",
+                  fontSize: "16px",
+                }}
+              >
+                Email:
+              </Typography>
+              <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+              <Typography
+                // className="header-font"
+                sx={{
+                  color: "#221E30",
+                  // color: "white",
+                  fontSize: "16px",
+                }}
+              >
+                Tel:
+              </Typography>
+              <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+            </Grid>
+          </Grid>
+          <Typography
+            // className="header-font"
+            sx={{
+              color: "#221E30",
+              // color: "white",
+              fontSize: "16px",
+            }}
+          >
+            Query:
+          </Typography>
+          <TextField
+            fullWidth={true}
+            multiline
+            rows={5}
+            sx={{ margin: "12px 0" }}
+          />
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Button
+              sx={{
+                background: "#221E30",
+                color: "white",
+                padding: "16px 18px",
+                "&:hover": {
+                  color: "#221E30",
+                  background: "white",
+                  border: "1px solid #221E30",
+                },
+              }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 
