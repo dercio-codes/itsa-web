@@ -3,7 +3,7 @@ import { Modal, Paper, IconButton, Pagination } from "@mui/material";
 import { Box, Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Divider } from "@mui/material";
-import { Navbar, Footer } from ".";
+import { Navbar, Footer, EventsComponent } from ".";
 
 const Events = () => {
   const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ const Events = () => {
         sx={{
           height: "250px",
           backgroundImage:
-            "url('https://www.ufs.ac.za/images/default-source/default-album/student-life_graduation.jpg?sfvrsn=56684c20_0')",
+            "url('https://www.ufs.ac.za/images/default-source/default-album/kaleidoscope-(226).jpg?sfvrsn=2e684c20_0')",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           backgroundPosition: "bottom",
@@ -81,61 +81,8 @@ const Events = () => {
           ></Box>
         </Box>
       </Box>
-      <Box sx={{ margin: "50px auto" }}>
-        <Typography
-          className="header-font"
-          sx={{
-            textAlign: { xs: "center" },
-            margin: { xs: "12px auto", lg: "0" },
-            color: "#221E30",
-            fontSize: { xs: "30px", lg: "40px" },
-          }}
-        >
-          Projects
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: { xs: "center" },
-            margin: { xs: "2px auto", lg: "0" },
-            color: "#221E30",
-            fontSize: "16px",
-          }}
-        >
-          Here is a few images from our events and conferences.
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: { xs: "75%", lg: "50%" },
-            margin: "21px auto",
-          }}
-        >
-          <Box
-            sx={{
-              width: "20px",
-              height: "20px",
-              borderRadius: "50%",
-              background: "#221E30",
-              opacity: "0.5",
-            }}
-          />
-          <Divider
-            sx={{ background: "#221E30", width: "70%", opacity: "0.5" }}
-          />
-          <Box
-            sx={{
-              width: "20px",
-              height: "20px",
-              borderRadius: "50%",
-              background: "#221E30",
-              opacity: "0.5",
-            }}
-          />
-        </Box>
-      </Box>
-      <Grid container spacing={2}>
+
+      {/* <Grid container spacing={2}>
         {paginatedImages.map((image, index) => (
           <Grid
             item
@@ -154,7 +101,8 @@ const Events = () => {
             />
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
+      <EventsComponent />
       <Pagination
         count={Math.ceil(images.length / itemsPerPage)}
         page={page}

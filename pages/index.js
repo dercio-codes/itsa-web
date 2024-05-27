@@ -408,83 +408,8 @@ export default function Home() {
               ></Box>
             </Box>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "50px 0",
-            }}
-          >
-            <Box sx={{ margin: "75px", width: "100%" }}>
-              <Typography
-                className="header-font"
-                sx={{
-                  textAlign: { xs: "center" },
-                  margin: { xs: "12px auto", lg: "0" },
-                  color: "#221E30",
-                  // color: "white",
-                  fontSize: "40px",
-                }}
-              >
-                Previous Events{" "}
-              </Typography>
 
-              <Typography
-                // className="header-font"
-                sx={{
-                  textAlign: { xs: "center" },
-                  margin: { xs: "12px auto", lg: "0" },
-                  color: "#221E30",
-                  // color: "white",
-                  fontSize: "16px",
-                }}
-              >
-                Here Is A List Of Our Previous Events{" "}
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "50%",
-                  margin: "12px auto",
-                  // background: "red",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    background: "#221E30",
-                    opacity: "0.5",
-                  }}
-                />
-                <Divider sx={{ color: "#221E30", width: "70%" }} />
-                <Box
-                  sx={{
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    background: "#221E30",
-                    opacity: "0.5",
-                  }}
-                />
-              </Box>
-            </Box>
-            {[1, 2, 3, 4].map((item, index) => (
-              <Event
-                key={item}
-                color={colors[index]}
-                reversed={index % 2 === 0}
-              />
-            ))}
-          </Grid>
-
+          <EventsComponent />
           <OurReps text="white" bg="#221E30" />
           <ContactForm />
           <Footer />
@@ -929,6 +854,83 @@ export const OurReps = ({ text, bg }) => {
           </Marquee>
         </Box>
       </Grid>
+    </Grid>
+  );
+};
+
+export const EventsComponent = () => {
+  return (
+    <Grid
+      item
+      xs={12}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "50px 0",
+      }}
+    >
+      <Box sx={{ margin: "75px", width: "100%" }}>
+        <Typography
+          className="header-font"
+          sx={{
+            textAlign: { xs: "center" },
+            margin: { xs: "12px auto", lg: "0" },
+            color: "#221E30",
+            // color: "white",
+            fontSize: "40px",
+          }}
+        >
+          Previous Events{" "}
+        </Typography>
+
+        <Typography
+          // className="header-font"
+          sx={{
+            textAlign: { xs: "center" },
+            margin: { xs: "12px auto", lg: "0" },
+            color: "#221E30",
+            // color: "white",
+            fontSize: "16px",
+          }}
+        >
+          Here Is A List Of Our Previous Events{" "}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "50%",
+            margin: "12px auto",
+            // background: "red",
+          }}
+        >
+          <Box
+            sx={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              background: "#221E30",
+              opacity: "0.5",
+            }}
+          />
+          <Divider sx={{ color: "#221E30", width: "70%" }} />
+          <Box
+            sx={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              background: "#221E30",
+              opacity: "0.5",
+            }}
+          />
+        </Box>
+      </Box>
+      {[1, 2, 3, 4].map((item, index) => (
+        <Event key={item} color={colors[index]} reversed={index % 2 === 0} />
+      ))}
     </Grid>
   );
 };
