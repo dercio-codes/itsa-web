@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 // import { Navbar } from "./../../components/main";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-// import AboutUsSlider from "./../../components/about-us-slider";
+import AboutUsSlider from "./../../components/about-us-slider";
 import Link from "@mui/material/Link";
 
 function handleClick(event) {
