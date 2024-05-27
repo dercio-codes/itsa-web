@@ -10,6 +10,8 @@ import {
   Avatar,
   IconButton,
 } from "@mui/material";
+import Link from "next/link";
+
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
@@ -142,6 +144,7 @@ export default function Home() {
               >
                 Are you an IT student ?{" "}
               </Typography>
+
               <Typography
                 className="header-font"
                 sx={{
@@ -173,6 +176,7 @@ export default function Home() {
                 />
                 <Divider sx={{ color: "#221E30", width: "70%" }} />
               </Box>
+
               <Typography
                 // className="header-font"
                 sx={{
@@ -428,6 +432,7 @@ export default function Home() {
               >
                 Previous Events{" "}
               </Typography>
+
               <Typography
                 // className="header-font"
                 sx={{
@@ -480,97 +485,7 @@ export default function Home() {
             ))}
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            sx={{
-              padding: "50px 0",
-              background: "#221E30",
-              minHeight: "50vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              className="header-font"
-              sx={{
-                textAlign: { xs: "center" },
-                margin: { xs: "12px auto", lg: "0" },
-                // color: "#221E30",
-                color: "white",
-                fontSize: { xs: "30px", lg: "40px" },
-              }}
-            >
-              Our Representatives{" "}
-            </Typography>
-            <Typography
-              // className="header-font"
-              sx={{
-                textAlign: { xs: "center" },
-                margin: { xs: "2px auto", lg: "0" },
-                // color: "#221E30",
-                color: "white",
-                fontSize: "16px",
-              }}
-            >
-              Here Is A List Of Our Representatives{" "}
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: { xs: "75%", lg: "50%" },
-                margin: "12px 0",
-                // background: "red",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#eee",
-                  opacity: "0.5",
-                }}
-              />
-              <Divider
-                sx={{ background: "#eee", width: "70%", opacity: "0.5" }}
-              />
-              <Box
-                sx={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#eee",
-                  opacity: "0.5",
-                }}
-              />
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              padding: "50px 0",
-              background: "#221E30",
-              // minHeight: "100vh",
-              display: "flex",
-              flexDirection: "column",
-              // justifyContent: "center",
-              // alignItems: "center",
-            }}
-          >
-            <Box sx={{ width: "90%", margin: "0 auto" }}>
-              <Marquee>
-                {reps.map((rep, index) => {
-                  return <Representative rep={rep} key={index} />;
-                })}
-              </Marquee>
-            </Box>
-          </Grid>
+          <OurReps text="white" bg="#221E30" />
           <ContactForm />
           <Footer />
         </Grid>
@@ -639,6 +554,7 @@ export const Navbar = () => {
               >
                 Home
               </Typography>
+
               <Typography
                 sx={{ margin: "0 21px", display: { xs: "none", md: "flex" } }}
               >
@@ -648,6 +564,7 @@ export const Navbar = () => {
                 sx={{
                   display: "flex",
                   justifyContent: "flex-end",
+
                   alignItems: "center",
                 }}
               >
@@ -722,16 +639,20 @@ export const Navbar = () => {
             padding: "0 21px",
           }}
         >
-          <Box
-            sx={{
-              width: "75px",
-              height: "75px",
-              backgroundImage: 'url("/reps/2.png")',
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: { xs: "left" },
-            }}
-          />
+          <Link href="/">
+            <a>
+              <Box
+                sx={{
+                  width: "75px",
+                  height: "75px",
+                  backgroundImage: 'url("/reps/2.png")',
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: { xs: "left" },
+                }}
+              />
+            </a>
+          </Link>
 
           <IconButton sx={{ display: { xs: "flex", lg: "none" } }}>
             <Box
@@ -756,16 +677,146 @@ export const Navbar = () => {
               width: "100%",
             }}
           >
-            <Typography sx={{ fontSize: "14px" }}>About Us</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Membership</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Events</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Resources</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Projects</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Committee</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Blog/News</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Contact</Typography>
-            <Typography sx={{ fontSize: "14px" }}>FAQ</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Gallery</Typography>
+            <Link href="/">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  About Us
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/membership">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Membership
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/events">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Events
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/resources">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Resources
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/projects">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Projects
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/committee">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Committee
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/news">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Blog/News
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/contact">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Contact
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/faq">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  FAQ
+                </Typography>
+              </a>
+            </Link>
+
+            <Link href="/gallery">
+              <a>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Gallery
+                </Typography>
+              </a>
+            </Link>
+
             <Box className="btn-container">
               {/* <button className='btn btn--shockwave is-active'>
     Shockwave
@@ -784,7 +835,105 @@ export const Navbar = () => {
   );
 };
 
-const Representative = ({ rep }) => {
+export const OurReps = ({ text, bg }) => {
+  return (
+    <Grid id="#committee" item xs={12}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          padding: "50px 0",
+          background: bg,
+          minHeight: "50vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography
+          className="header-font"
+          sx={{
+            textAlign: { xs: "center" },
+            margin: { xs: "12px auto", lg: "0" },
+            // color: "#221E30",
+            color: text,
+            fontSize: { xs: "30px", lg: "40px" },
+          }}
+        >
+          Our Representatives{" "}
+        </Typography>
+        <Typography
+          // className="header-font"
+          sx={{
+            textAlign: { xs: "center" },
+            margin: { xs: "2px auto", lg: "0" },
+            // color: "#221E30",
+            color: text,
+            fontSize: "16px",
+          }}
+        >
+          Here Is A List Of Our Representatives{" "}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: { xs: "75%", lg: "50%" },
+            margin: "12px 0",
+            // background: "red",
+          }}
+        >
+          <Box
+            sx={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              background: text,
+              opacity: "0.5",
+            }}
+          />
+          <Divider sx={{ background: text, width: "70%", opacity: "0.5" }} />
+          <Box
+            sx={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              background: text,
+              opacity: "0.5",
+            }}
+          />
+        </Box>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          padding: "35px 0",
+          background: bg,
+          // minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          // justifyContent: "center",
+          // alignItems: "center",
+        }}
+      >
+        <Box sx={{ width: "90%", margin: "0 auto" }}>
+          <Marquee>
+            {reps.map((rep, index) => {
+              return (
+                <Representative rep={rep} key={index} bg={bg} text={text} />
+              );
+            })}
+          </Marquee>
+        </Box>
+      </Grid>
+    </Grid>
+  );
+};
+
+const Representative = ({ rep, text }) => {
   return (
     <Box
       sx={{
@@ -810,7 +959,7 @@ const Representative = ({ rep }) => {
           textAlign: { xs: "center" },
           margin: { xs: "12px auto", lg: "12px 0" },
           // color: "#221E30",
-          color: "white",
+          color: text,
           fontSize: "24px",
         }}
       >
@@ -822,7 +971,7 @@ const Representative = ({ rep }) => {
           textAlign: { xs: "center" },
           margin: { xs: "0 auto", lg: "0 0" },
           // color: "#221E30",
-          color: "white",
+          color: text,
           fontSize: "24px",
         }}
       >
@@ -835,7 +984,7 @@ const Representative = ({ rep }) => {
           textAlign: { xs: "center" },
           margin: { xs: "12px auto", lg: "0" },
           // color: "#221E30",
-          color: "white",
+          color: text,
           fontSize: "16px",
         }}
       >
@@ -1262,6 +1411,7 @@ export const ContactForm = () => {
                 Name
               </Typography>
               <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+
               <Typography
                 // className="header-font"
                 sx={{
@@ -1286,6 +1436,7 @@ export const ContactForm = () => {
                 Email:
               </Typography>
               <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+
               <Typography
                 // className="header-font"
                 sx={{

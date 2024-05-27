@@ -232,7 +232,11 @@ export default function Contact() {
                   >
                     Name
                   </Typography>
-                  <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  <TextField
+                    placeholder={`Informatic`}
+                    fullWidth={true}
+                    sx={{ margin: "12px 0" }}
+                  />
                   <Typography
                     // className="header-font"
                     sx={{
@@ -243,7 +247,11 @@ export default function Contact() {
                   >
                     Surname:
                   </Typography>
-                  <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  <TextField
+                    placeholder={`Technology`}
+                    fullWidth={true}
+                    sx={{ margin: "12px 0" }}
+                  />
                 </Grid>
                 <Grid item xs={12} sm={6} sx={{ padding: "0 0 0 12px" }}>
                   <Typography
@@ -256,7 +264,11 @@ export default function Contact() {
                   >
                     Email:
                   </Typography>
-                  <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  <TextField
+                    placeholder={`ITSA@gmail.com`}
+                    fullWidth={true}
+                    sx={{ margin: "12px 0" }}
+                  />
                   <Typography
                     // className="header-font"
                     sx={{
@@ -267,7 +279,11 @@ export default function Contact() {
                   >
                     Tel:
                   </Typography>
-                  <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                  <TextField
+                    placeholder={`011 - 123 - 4567`}
+                    fullWidth={true}
+                    sx={{ margin: "12px 0" }}
+                  />
                 </Grid>
               </Grid>
               <Grid item xs={12} sm={12} sx={{ padding: "0" }}>
@@ -281,7 +297,11 @@ export default function Contact() {
                 >
                   Qualification :
                 </Typography>
-                <TextField fullWidth={true} sx={{ margin: "12px 0" }} />
+                <TextField
+                  placeholder={`Majoring in Computer Science`}
+                  fullWidth={true}
+                  sx={{ margin: "12px 0" }}
+                />
                 <Typography
                   // className="header-font"
                   sx={{
