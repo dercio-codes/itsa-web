@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 // import { Navbar } from "./../../components/main";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import AboutUsSlider from "./../../components/about-us-slider";
+// import AboutUsSlider from "./../../components/about-us-slider";
 import Link from "@mui/material/Link";
 
 function handleClick(event) {
@@ -37,8 +37,7 @@ const CategoryPage = () => {
 
   return (
     <Box sx={{ width: "100%", margin: "0 auto" }}>
-      <Box sx={{ width: "100%", background: "", margin: "0 auto" }}>
-      </Box>
+      <Box sx={{ width: "100%", background: "", margin: "0 auto" }}></Box>
       <Box
         sx={{
           height: { xs: "30vh", lg: "50vh" },
@@ -125,7 +124,7 @@ const CategoryPage = () => {
             >
               Additional Blog Posts
             </Typography>
-            <AboutUsSlider />
+            {/* <AboutUsSlider /> */}
           </Box>
         </Box>
       </Box>
