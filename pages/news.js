@@ -165,6 +165,7 @@ const News = () => {
           />
         </Box>
       )}
+
       <Footer />
     </Box>
   );
