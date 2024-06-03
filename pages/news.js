@@ -1,9 +1,11 @@
 import {
-  Card,
-  CardContent,
-  CardMedia,
+  Container,
   Typography,
   Grid,
+  Card,
+  CardContent,
+  CardActionArea,
+  CardMedia,
   Box,
   Breadcrumbs,
   Link,
@@ -12,6 +14,7 @@ import {
 } from "@mui/material";
 import { ContactForm, Footer, Navbar } from ".";
 import { useState, useEffect } from "react";
+import { blogPosts } from "./blog";
 
 const News = () => {
   // Pagination state
@@ -163,6 +166,37 @@ const News = () => {
               justifyContent: "center",
             }}
           />
+          <Container maxWidth="lg" sx={{ py: 6, display: "none" }}>
+            <Typography variant="h4" gutterBottom>
+              ITSA Blog
+            </Typography>
+            <Grid container spacing={2}>
+              {blogPosts.map((article, index) => (
+                <Grid container spacing={2} key={index}>
+                  <Grid item xs={0} sm={0} md={6} />
+                  <Grid item xs={12} sm={6} md={6}>
+                    <Link
+                      href={`/blog/${article.title.split(" ").join("-").toLocaleLowerCase()}`}
+                      passHref
+                    >
+                      <Card component="a" sx={{ height: "100%" }}>
+                        <CardActionArea sx={{ height: "100%" }}>
+                          <CardContent>
+                            <Typography variant="h6">
+                              {article.title}
+                            </Typography>
+                            <Typography variant="p">
+                              {article.description}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Card>
+                    </Link>
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
         </Box>
       )}
 

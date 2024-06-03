@@ -81,7 +81,7 @@ const ArticleList = () => {
                       <CardContent>
                         <Typography variant="h6">{article.title}</Typography>
                         <Typography variant="p">
-                          {article.description}
+                          {article.introduction}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -100,161 +100,78 @@ export default ArticleList;
 
 export const blogPosts = [
   {
-    title: "5 Tips for Tech Students to Succeed in Their Studies",
-    description:
-      "Discover practical strategies to excel academically and develop essential skills for a career in technology.",
-    image: "https://example.com/tips-for-tech-students.jpg",
+    title: "5 Proven Study Techniques for Tech Students",
+    introduction:
+      "Pursuing a degree in technology requires dedication, passion, and effective study strategies. As a tech student, you're likely juggling a demanding course load, complex concepts, and the pressure to excel in a competitive field. However, with the right study techniques, you can conquer your tech courses and set yourself up for long-term success. In this blog post, we'll explore five proven study methods that have helped countless tech students achieve their academic goals.",
+    paragraph1:
+      "1. **The Pomodoro Technique**: This time management method is particularly useful for tech students who need to stay focused during intense study sessions. The Pomodoro Technique involves breaking your work into 25-minute intervals, called Pomodoros, separated by short breaks. Set a timer for 25 minutes and focus solely on your study material during this time. Eliminate all distractions and immerse yourself in the content. When the timer goes off, take a 5-minute break to stretch, grab a snack, or clear your mind. After four Pomodoros, take a longer break of 15-30 minutes to recharge.",
+    paragraph2:
+      "2. **Spaced Repetition**: This study method is based on the principle that information is better retained when it's reviewed at increasing intervals over time. Spaced repetition involves creating flashcards or notes and reviewing them at specific intervals, gradually increasing the time between each review session. Create flashcards or notes for key concepts, formulas, or definitions in your tech courses. Review the flashcards or notes shortly after creating them (e.g., within a few hours or the same day). Review the material again after a day or two, then a week, and gradually increase the time between each review session. Continuously review the flashcards or notes, focusing more on the ones you struggle with.",
+    paragraph3:
+      "3. **Explaining Concepts to Peers**: Teaching others is one of the best ways to solidify your own understanding of a subject. By explaining tech concepts to your peers, you'll be forced to organize your thoughts, clarify any gaps in your knowledge, and communicate effectively. Form study groups with classmates and take turns explaining concepts to each other. Volunteer to lead a study session or tutor a fellow student who's struggling with a particular topic. Explain concepts to friends or family members who aren't familiar with the subject matter. This will help you identify areas where your understanding is weak and needs further clarification.",
+    benefits:
+      "The Pomodoro Technique helps you maintain concentration, avoid burnout, and track your progress. Spaced repetition helps cement information in your long-term memory, making it easier to recall and apply during exams or when working on projects. Explaining concepts to others not only helps you learn but also develops your communication skills, which are essential in the tech industry.",
+    conclusion:
+      "Mastering study techniques is crucial for tech students to excel in their courses and prepare for successful careers. By incorporating the Pomodoro Technique, spaced repetition, explaining concepts to peers, consistent practice, and leveraging online resources into your study routine, you'll be well on your way to conquering your tech courses and setting yourself up for long-term success. Remember, effective studying is a skill that takes time and practice to develop, so be patient with yourself and keep experimenting to find the techniques that work best for you. With dedication and the right strategies, you can unlock your full potential as a tech student and thrive in the dynamic and ever-evolving world of technology.",
   },
   {
-    title: "Internship Opportunities for Tech Students: A Guide",
-    description:
-      "Learn how to find, apply, and make the most of internships to gain real-world experience and boost your career prospects.",
-    image: "https://example.com/internship-opportunities.jpg",
+    title: "5 Essential Tools for Tech Students",
+    introduction:
+      "As a tech student, you're likely familiar with the importance of having the right tools for the job. Whether you're working on a project, studying for an exam, or simply trying to stay organized, the right tools can make all the difference. In this blog post, we'll explore five essential tools that every tech student should have in their toolkit.",
+    paragraph1:
+      "1. **Visual Studio Code**: This popular code editor is a must-have for any tech student. With its extensive plugin library and customizable interface, Visual Studio Code is the perfect tool for coding, debugging, and testing.",
+    paragraph2:
+      "2. **Git**: This version control system is essential for managing and tracking changes to your code. With Git, you can collaborate with others, keep track of changes, and roll back to previous versions if needed.",
+    paragraph3:
+      "3. **Trello**: This project management tool is perfect for organizing and prioritizing your tasks. With Trello, you can create boards, lists, and cards to keep track of your projects and stay on top of your work.",
+    benefits:
+      "Visual Studio Code provides a powerful and customizable coding environment. Git helps you manage and track changes to your code. Trello keeps you organized and on top of your projects.",
+    conclusion:
+      "Having the right tools can make all the difference for tech students. By incorporating these five essential tools into your workflow, you'll be better equipped to tackle your projects, stay organized, and achieve your goals. Remember, the right tools can help you stay focused, productive, and successful in your tech education.",
   },
   {
-    title: "Networking for Tech Students: Building Connections in the Industry",
-    description:
-      "Explore the importance of networking and practical ways for tech students to build relationships with professionals and peers.",
-    image: "https://example.com/networking-for-tech-students.jpg",
+    title: "Form Study Techniques in Industrial Design",
+    introduction:
+      "Form study is a crucial aspect of industrial design, involving the analysis and comprehension of existing designs to inform and improve future designs. In this blog post, we'll explore the key techniques and strategies for conducting form study in the context of industrial design.",
+    paragraph1:
+      "1. **Visual Language**: Use visual language to conduct form study in the context of Industrial Design, exploring every listed keyword and the combination of them. This involves analyzing the visual elements of a design, such as shape, color, and texture, to understand how they contribute to the overall aesthetic and functionality of the product.",
+    paragraph2:
+      "2. **Daily Practice**: Think three-dimensionally, and practice applying basic design principles by seeing and comprehending every detail of current designs on the market. This involves regularly studying and analyzing existing designs to identify trends, patterns, and best practices.",
+    paragraph3:
+      "3. **Design Principles**: Apply basic design principles, such as balance, proportion, and harmony, to analyze and improve existing designs. This involves identifying areas where the design could be improved and proposing alternative solutions.",
+    benefits:
+      "Form study techniques help designers analyze and improve existing designs, leading to more effective and efficient design solutions. By applying these techniques, designers can create products that are both aesthetically pleasing and functional.",
+    conclusion:
+      "Form study is a vital part of the design process, allowing designers to analyze and improve existing designs. By applying the techniques and strategies outlined in this blog post, designers can create more effective and efficient design solutions.",
   },
   {
-    title: "Tech Conferences and Events Every Student Should Attend",
-    description:
-      "Discover the top tech conferences and events that offer learning, networking, and career opportunities for students.",
-    image: "https://example.com/tech-conferences.jpg",
+    title: "Form Study Techniques in Horse Racing",
+    introduction:
+      "Form study is a critical aspect of horse racing, involving the analysis and comprehension of a horse's past performances to predict its future performance. In this blog post, we'll explore the key techniques and strategies for conducting form study in the context of horse racing.",
+    paragraph1:
+      "1. **Money**: The most important form indicator is money, as it represents the stakes and market value of a horse. Speed is the second most important indicator, as it indicates the point at which a horse is tested.",
+    paragraph2:
+      "2. **Stakes and Market Value**: The horse that can win the most money or pull off the best value coup is considered the form horse. This involves analyzing the horse's past performances and identifying trends and patterns that can inform its future performance.",
+    paragraph3:
+      "3. **Form Indicators**: Other important form indicators include the horse's age, sex, and breeding. These factors can influence the horse's performance and should be taken into account when conducting form study.",
+    benefits:
+      "Form study techniques help horse racing enthusiasts and professionals analyze and predict a horse's future performance. By applying these techniques, they can make more informed decisions about which horses to bet on or which horses to train.",
+    conclusion:
+      "Form study is a vital part of horse racing, allowing enthusiasts and professionals to analyze and predict a horse's future performance. By applying the techniques and strategies outlined in this blog post, they can make more informed decisions and improve their chances of success.",
   },
   {
-    title: "Scholarships and Funding Opportunities for Tech Students",
-    description:
-      "Find out about various scholarships, grants, and financial aid options available to support tech students in their education.",
-    image: "https://example.com/scholarships-for-tech-students.jpg",
+    title: "General Form Study Techniques",
+    introduction:
+      "Form study is a versatile technique that can be applied to various fields, including industrial design, horse racing, and more. In this blog post, we'll explore the general techniques and strategies for conducting form study.",
+    paragraph1:
+      "1. **SQ3R Method**: This method involves Surveying the material, Questioning what you need to learn, Reading the material while answering questions, Reciting the answers, and Reviewing the material. This method can be applied to any field, including industrial design and horse racing.",
+    paragraph2:
+      "2. **Visual Analysis**: Use visual analysis to conduct form study, exploring every listed keyword and the combination of them. This involves analyzing the visual elements of a design or performance to understand how they contribute to the overall aesthetic and functionality.",
+    paragraph3:
+      "3. **Pattern Recognition**: Recognize patterns and trends in the data or designs you are studying. This involves identifying areas where the design or performance could be improved and proposing alternative solutions.",
+    benefits:
+      "Form study techniques help individuals analyze and improve existing designs or performances. By applying these techniques, they can create more effective and efficient solutions.",
+    conclusion:
+      "Form study is a versatile technique that can be applied to various fields. By applying the techniques and strategies outlined in this blog post, individuals can analyze and improve existing designs or performances, leading to more effective and efficient solutions.",
   },
-  {
-    title:
-      "Balancing Academics and Extracurricular Activities as a Tech Student",
-    description:
-      "Learn how to effectively manage your time and participate in extracurricular activities to enhance your overall experience as a tech student.",
-    image: "https://example.com/balancing-academics-extracurriculars.jpg",
-  },
-  {
-    title:
-      "Tech Startups Hiring Students: Opportunities for Hands-On Experience",
-    description:
-      "Explore the benefits of working at tech startups and how students can find and secure positions to gain practical experience.",
-    image: "https://example.com/tech-startups-hiring-students.jpg",
-  },
-  {
-    title: "Developing a Portfolio as a Tech Student: Showcasing Your Skills",
-    description:
-      "Discover the importance of creating a portfolio and learn tips on how to effectively showcase your projects and skills to potential employers.",
-    image: "https://example.com/developing-portfolio-as-tech-student.jpg",
-  },
-  {
-    title: "Tech Meetups and Study Groups for Students",
-    description:
-      "Learn about the benefits of participating in tech meetups and study groups, and how to find and join these communities as a student.",
-    image: "https://example.com/tech-meetups-study-groups.jpg",
-  },
-  {
-    title: "Mentorship Programs for Tech Students: Finding the Right Mentor",
-    description:
-      "Explore the advantages of having a mentor and learn how to find and build a mentorship relationship as a tech student.",
-    image: "https://example.com/mentorship-programs-for-tech-students.jpg",
-  },
-  {
-    title: "Coding Challenges and Hackathons for Tech Students",
-    description:
-      "Discover the benefits of participating in coding challenges and hackathons, and how to find and prepare for these events as a tech student.",
-    image: "https://example.com/coding-challenges-hackathons.jpg",
-  },
-  {
-    title:
-      "Tech Certifications and Courses for Students to Enhance Their Skills",
-    description:
-      "Learn about the most valuable tech certifications and courses that can help students improve their skills and stand out in the job market.",
-    image: "https://example.com/tech-certifications-courses.jpg",
-  },
-  {
-    title: "Work-Study Programs for Tech Students: Earning While Learning",
-    description:
-      "Explore the opportunities available through work-study programs and how tech students can find and participate in these programs.",
-    image: "https://example.com/work-study-programs-for-tech-students.jpg",
-  },
-  {
-    title: "Tech Entrepreneurship for Students: Starting Your Own Business",
-    description:
-      "Learn about the benefits and challenges of tech entrepreneurship, and how students can explore starting their own businesses.",
-    image: "https://example.com/tech-entrepreneurship-for-students.jpg",
-  },
-  {
-    title:
-      "Diversity and Inclusion in Tech: Supporting Underrepresented Students",
-    description:
-      "Discover the importance of diversity and inclusion in the tech industry and how students from underrepresented groups can find support and resources.",
-    image: "https://example.com/diversity-inclusion-in-tech.jpg",
-  },
-  //   {
-  //     title: "9 Unique Ways to Use Technology in the Classroom",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom",
-  //   },
-  //   {
-  //     title: "7 Reasons Why Students Need Technology in the Classroom",
-  //     url: "https://explorance.com/blog/7-reasons-students-need-technology-classroom/",
-  //   },
-  //   {
-  //     title: "How Using Technology in Teaching Affects Classrooms",
-  //     url: "https://www.gcu.edu/blog/teaching-school-administration/how-using-technology-teaching-affects-classrooms",
-  //   },
-  //   {
-  //     title: "Gamified Learning",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#1",
-  //   },
-  //   {
-  //     title: "Digital Field Trips",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#2",
-  //   },
-  //   {
-  //     title: "Integrate Social Media",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#3",
-  //   },
-  //   {
-  //     title: "Creating Digital Content",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#5",
-  //   },
-  //   {
-  //     title: "Using a Classroom Calendar",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#6",
-  //   },
-  //   {
-  //     title: "Review and Critique Webpages",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#7",
-  //   },
-  //   {
-  //     title: "Video/Multimedia Lessons and Presentations",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#8",
-  //   },
-  //   {
-  //     title: "Online Activities for Students Who Finish Work Early",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom#9",
-  //   },
-  //   {
-  //     title: "Why Students Benefit from Using Technology in the Classroom",
-  //     url: "https://www.goguardian.com/blog/9-unique-ways-to-use-technology-in-the-classroom",
-  //   },
-  //   {
-  //     title: "Distill Actionable Insights from Student Comments with AI",
-  //     url: "https://explorance.com/blog/7-reasons-students-need-technology-classroom#1",
-  //   },
-  //   {
-  //     title: "Access to Information and Resources",
-  //     url: "https://explorance.com/blog/7-reasons-students-need-technology-classroom#2",
-  //   },
-  //   {
-  //     title: "Supports Different Types of Learning Styles",
-  //     url: "https://explorance.com/blog/7-reasons-students-need-technology-classroom#5",
-  //   },
-  //   {
-  //     title: "Teaches Students How to be Responsible Online",
-  //     url: "https://explorance.com/blog/7-reasons-students-need-technology-classroom#6",
-  //   },
 ];
