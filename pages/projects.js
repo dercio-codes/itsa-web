@@ -146,7 +146,7 @@ const Events = () => {
               key={index}
               xs={6}
               sm={4}
-              md={3}
+              md={2.5}
               lg={2.2}
               sx={{ margin: "12px auto" }}
             >

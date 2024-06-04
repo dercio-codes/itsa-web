@@ -110,7 +110,7 @@ const News = () => {
                 key={index}
                 xs={12}
                 sm={5.5}
-                md={4}
+                md={2.5}
                 lg={2.5}
                 sx={{ margin: { xs: "12px 21px", lg: "12px 21px" } }}
               >
@@ -166,33 +166,39 @@ const News = () => {
               justifyContent: "center",
             }}
           />
-          <Container maxWidth="lg" sx={{ py: 6, display: "none" }}>
-            <Typography variant="h4" gutterBottom>
+          <Container maxWidth="lg" sx={{ py: 6, display: "" }}>
+            <Typography
+              variant="h4"
+              sx={{ textAlign: "center", margin: "21px auto 32px auto" }}
+            >
               ITSA Blog
             </Typography>
             <Grid container spacing={2}>
               {blogPosts.map((article, index) => (
-                <Grid container spacing={2} key={index}>
-                  <Grid item xs={0} sm={0} md={6} />
-                  <Grid item xs={12} sm={6} md={6}>
-                    <Link
-                      href={`/blog/${article.title.split(" ").join("-").toLocaleLowerCase()}`}
-                      passHref
-                    >
-                      <Card component="a" sx={{ height: "100%" }}>
-                        <CardActionArea sx={{ height: "100%" }}>
-                          <CardContent>
-                            <Typography variant="h6">
-                              {article.title}
-                            </Typography>
-                            <Typography variant="p">
-                              {article.description}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Link>
-                  </Grid>
+                <Grid item xs={12} key={index} sm={6} md={6}>
+                  <Link
+                    href={`/blog/${article.title.split(" ").join("-").toLocaleLowerCase()}`}
+                    passHref
+                  >
+                    <Card component="a" sx={{ height: "100%" }}>
+                      <CardActionArea sx={{ height: "100%" }}>
+                        <CardContent>
+                          <Typography variant="h6">{article.title}</Typography>
+                          <Typography
+                            variant="p"
+                            sx={{
+                              display: "-webkit-box",
+                              overflow: "hidden",
+                              WebkitBoxOrient: "vertical",
+                              WebkitLineClamp: 3,
+                            }}
+                          >
+                            {article.introduction}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Link>
                 </Grid>
               ))}
             </Grid>

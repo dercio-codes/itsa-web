@@ -11,6 +11,7 @@ import {
   IconButton,
   Drawer,
 } from "@mui/material";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
@@ -868,7 +869,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md:"12px", lg:"14px"},
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -882,7 +883,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -896,7 +897,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -910,7 +911,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -924,7 +925,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -938,7 +939,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -952,7 +953,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -966,7 +967,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -980,7 +981,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -994,7 +995,7 @@ export const Navbar = () => {
               <a>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { md: "12px", lg: "14px" },
                     cursor: "pointer",
                     "&:hover": { textDecoration: "underline" },
                   }}
@@ -1853,51 +1854,71 @@ export const Footer = () => {
       <Box className="footer">
         <Box className="container">
           <Grid container sx={{ p: "60px" }} className="row">
-            <Grid item xs={12} lg={4} className="col-lg-4 col-sm-4 col-xs-12">
+            <Grid item xs={12} md={4} className="col-lg-4 col-sm-4 col-xs-12">
               <Box className="single_footer">
                 <h4>ITSA</h4>
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <Link href="/">
+                      <a>Home</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Events</a>
+                    <Link href="/events">
+                      <a>Events</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Resources </a>
+                    <Link href="/resources">
+                      <a>Resources</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">About US</a>
+                    <Link href="/">
+                      <a>About Us</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Projects</a>
+                    <Link href="/projects">
+                      <a>Projects</a>
+                    </Link>
                   </li>
                 </ul>
               </Box>
             </Grid>
-            <Grid item xs={12} lg={4} className="col-md-4 col-sm-4 col-xs-12">
+            <Grid item xs={12} md={4} className="col-md-4 col-sm-4 col-xs-12">
               <Box className="single_footer single_footer_address">
                 <h4>Helper</h4>
                 <ul>
                   <li>
-                    <a href="#">Committe</a>
+                    <Link href="/committee">
+                      <a>Committee</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Blog & News</a>
+                    <Link href="/news">
+                      <a>Blog & News</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Contact </a>
+                    <Link href="/contact">
+                      <a>Contact </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Frequently Aked Questions</a>
+                    <Link href="/faq">
+                      <a>Frequently Aked Questions</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Join Us</a>
+                    <Link href="/membership">
+                      <a>Join Us</a>
+                    </Link>
                   </li>
                 </ul>
               </Box>
             </Grid>
-            <Grid item xs={12} lg={4} className="col-md-4 col-sm-4 col-xs-12">
+            <Grid item xs={12} md={4} className="col-md-4 col-sm-4 col-xs-12">
               <div className="single_footer single_footer_address">
                 <h4>Subscribe today</h4>
                 <div className="signup_form">
@@ -1914,86 +1935,74 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="social_profile">
-                <ul>
+                <ul style={{ background: "pink" }}>
                   <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/UFSweb/">
                       <IconButton
                         sx={{
                           border: "1px solid white",
-                          margin: "0 6px",
+                          color: "white",
+                          margin: "0 0 0 21px",
+                          "&:hover": {
+                            background: "white",
+                            color: "#3060b4",
+                          },
                         }}
                       >
-                        <Box
+                        <Facebook
                           sx={{
                             width: "35px",
                             height: "35px",
-                            borderRadius: "25%",
-                            // border: "1px solid white",
-                            backgroundImage:
-                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                            backgroundSize: "contain",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                            filter: "invert(1)",
-                            "&:hover": {
-                              background: "#ff3666",
-                            },
+                            borderRadius: "50%",
+                            color: "inherit",
                           }}
                         />
                       </IconButton>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://twitter.com/ufsweb?lang=en">
                       <IconButton
                         sx={{
                           border: "1px solid white",
-                          margin: "0 6px",
+                          color: "white",
+                          margin: "0 12px 0 21px",
+                          "&:hover": {
+                            background: "white",
+                            color: "#3060b4",
+                          },
                         }}
                       >
-                        <Box
+                        <Twitter
                           sx={{
                             width: "35px",
                             height: "35px",
-                            borderRadius: "25%",
-                            // border: "1px solid white",
-                            backgroundImage:
-                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                            backgroundSize: "contain",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                            filter: "invert(1)",
-                            "&:hover": {
-                              background: "#ff3666",
-                            },
+                            borderRadius: "50%",
+                            color: "inherit",
                           }}
                         />
                       </IconButton>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/ufsweb/?hl=en">
                       <IconButton
                         sx={{
                           border: "1px solid white",
-                          margin: "0 6px",
+                          color: "white",
+                          margin: "0 12px 0 21px",
+                          "&:hover": {
+                            background: "white",
+                            color: "#3060b4",
+                          },
                         }}
                       >
-                        <Box
+                        <Instagram
                           sx={{
                             width: "35px",
                             height: "35px",
-                            borderRadius: "25%",
-                            // border: "1px solid white",
-                            backgroundImage:
-                              "url('https://img.icons8.com/?size=50&id=118467&format=png')",
-                            backgroundSize: "contain",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                            filter: "invert(1)",
-                            "&:hover": {
-                              background: "#ff3666",
-                            },
+                            borderRadius: "50%",
+                            color: "inherit",
                           }}
                         />
                       </IconButton>
@@ -2077,7 +2086,7 @@ export const ContactForm = () => {
         />
       </Box>
       <Grid container>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
               height: "350px",
@@ -2090,7 +2099,7 @@ export const ContactForm = () => {
             }}
           />
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6}>
           <Grid container>
             <Grid item xs={12} sm={6} sx={{ padding: "0 12px 0 0" }}>
               <Typography
