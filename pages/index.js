@@ -9,10 +9,11 @@ import {
   Divider,
   Avatar,
   IconButton,
+  Drawer,
 } from "@mui/material";
-import Link from "next/link";
-
+import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -419,7 +420,265 @@ export default function Home() {
   );
 }
 
+// export const Navbar = () => {
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+
+//   const toggleDrawer = () => {
+//     setDrawerOpen(!drawerOpen);
+//   };
+
+//   return (
+//     <Box sx={{ background: "", height: "" }}>
+//       <Grid container>
+//         <Grid item sx={{ background: "", height: "", padding: "0 12px" }}>
+//           <Box
+//             sx={{
+//               height: { xs: "75px", lg: "75px" },
+//               width: { xs: "75px", md: "180px" },
+//               backgroundImage:
+//                 "url('https://www.ufs.ac.za/images/librariesprovider5/ufs_redesign_2021/ufsheaderlogo.svg?sfvrsn=15b37820_2')",
+//               backgroundSize: "contain",
+//               backgroundRepeat: "no-repeat",
+//               backgroundPosition: "left",
+//               margin: { xs: "0", lg: "0 0 0 21px" },
+//             }}
+//           />
+//         </Grid>
+//         <Grid
+//           item
+//           sx={{
+//             background: "",
+//             padding: { xs: "0 8px", md: "0", lg: "0 21px" },
+//             display: "flex",
+//             justifyContent: { xs: "flex-end", lg: "flex-end" },
+//             alignItems: "center",
+//             background: "",
+//           }}
+//         >
+//           <Stack
+//             sx={{
+//               width: { xs: "100%", lg: "75%" },
+//               padding: "0",
+//               display: "flex",
+//               justifyContent: { xs: "flex-end", lg: "flex-end" },
+//             }}
+//           >
+//             <Box
+//               sx={{
+//                 display: "flex",
+//                 justifyContent: { xs: "flex-end", lg: " space-between" },
+//                 alignItems: "center",
+//               }}
+//             >
+//               <Typography
+//                 sx={{ margin: "0 21px", display: { xs: "none", md: "flex" } }}
+//               >
+//                 Home
+//               </Typography>
+//               <Typography
+//                 sx={{ margin: "0 21px", display: { xs: "none", md: "flex" } }}
+//               >
+//                 Contact ICT
+//               </Typography>
+//               <Box
+//                 sx={{
+//                   display: "flex",
+//                   justifyContent: "flex-end",
+//                   alignItems: "center",
+//                 }}
+//               >
+//                 <TextField
+//                   sx={{
+//                     width: { xs: "75%", md: "200px", lg: "300px" },
+//                     display: { xs: "none", sm: "none", md: "flex" },
+//                   }}
+//                 />
+//                 <IconButton onClick={toggleDrawer}>
+//                   <Box
+//                     sx={{
+//                       width: "35px",
+//                       height: { xs: "25px", lg: "35px" },
+//                       backgroundImage:
+//                         'url("https://img.icons8.com/?size=50&id=120374&format=png")',
+//                       backgroundSize: "contain",
+//                       backgroundRepeat: "no-repeat",
+//                       backgroundPosition: "center",
+//                       "&:hover": {
+//                         backgroundColor: "#7995ae",
+//                       },
+//                     }}
+//                   />
+//                 </IconButton>
+//               </Box>
+//             </Box>
+//           </Stack>
+//         </Grid>
+//         <Grid item xs={12} sx={{ height: "", background: "" }}>
+//           <Box sx={{ width: { xs: "85%", lg: "50%" }, margin: "0 auto" }}>
+//             <Marquee gradient={true}>
+//               <Typography
+//                 sx={{
+//                   fontSize: "14px",
+//                   textDecoration: "italic",
+//                   margin: "8px 0",
+//                   color: "red",
+//                 }}
+//               >
+//                 Inspiring excellence, transforming lives through quality, impact
+//                 and care.
+//               </Typography>
+//             </Marquee>
+//           </Box>
+//         </Grid>
+//         <Grid
+//           item
+//           xs={12}
+//           sx={{
+//             height: "5vh",
+//             background: "#221E30",
+//             textAlign: "center",
+//             color: "#eee",
+//             fontWeight: "600",
+//           }}
+//         />
+//         <Grid
+//           item
+//           xs={12}
+//           sx={{
+//             background: "",
+//             display: "flex",
+//             justifyContent: "space-between",
+//             alignItems: "center",
+//             padding: "0 21px",
+//           }}
+//         >
+//           <Link href="/">
+//             <a>
+//               <Box
+//                 sx={{
+//                   width: "75px",
+//                   height: "75px",
+//                   backgroundImage: 'url("/reps/2.png")',
+//                   backgroundSize: "contain",
+//                   backgroundRepeat: "no-repeat",
+//                   backgroundPosition: { xs: "left" },
+//                 }}
+//               />
+//             </a>
+//           </Link>
+//           <Box
+//             sx={{
+//               display: { xs: "flex", lg: "none" },
+//               justifyContent: "flex-end",
+//               alignItems: "center",
+//             }}
+//           >
+//             <IconButton onClick={toggleDrawer}>
+//               <Box
+//                 sx={{
+//                   width: "35px",
+//                   height: { xs: "35px", lg: "35px" },
+//                   backgroundImage:
+//                     'url("https://img.icons8.com/?size=50&id=120374&format=png")',
+//                   backgroundSize: "contain",
+//                   backgroundRepeat: "no-repeat",
+//                   backgroundPosition: "center",
+//                 }}
+//               />
+//             </IconButton>
+//           </Box>
+//           <Box
+//             sx={{
+//               display: { xs: "none", md: "flex" },
+//               justifyContent: "space-evenly",
+//               alignItems: "center",
+//               width: "100%",
+//             }}
+//           >
+//             <Link href="/">
+//               <a>
+//                 <Typography
+//                   sx={{
+//                     fontSize: "14px",
+//                     cursor: "pointer",
+//                     "&:hover": {
+//                       textDecoration: "underline",
+//                     },
+//                   }}
+//                 >
+//                   About Us
+//                 </Typography>
+//               </a>
+//             </Link>
+//             {/* ... (other links) ... */}
+//             <Box className="btn-container">
+//               <Button
+//                 className="btn btn--shockwave is-active"
+//                 sx={{
+//                   color: "#eee",
+//                   background: "#221E30",
+//                 }}
+//               >
+//                 JOIN
+//               </Button>
+//             </Box>
+//           </Box>
+//         </Grid>
+//       </Grid>
+
+//       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
+//         <Box
+//           sx={{
+//             width: "250px",
+//             height: "100%",
+//             background: "#221E30",
+//             color: "#eee",
+//             padding: "20px",
+//           }}
+//         >
+//           <Box
+//             sx={{
+//               width: "100%",
+//               height: "50px",
+//               backgroundImage:
+//                 'url("https://img.icons8.com/?size=50&id=120374&format=png")',
+//               backgroundSize: "contain",
+//               backgroundRepeat: "no-repeat",
+//               backgroundPosition: "center",
+//               marginBottom: "20px",
+//             }}
+//           />
+//           <Box>
+//             <Link href="/">
+//               <a>
+//                 <Typography
+//                   sx={{
+//                     fontSize: "16px",
+//                     cursor: "pointer",
+//                     marginBottom: "10px",
+//                     "&:hover": {
+//                       textDecoration: "underline",
+//                     },
+//                   }}
+//                 >
+//                   About Us
+//                 </Typography>
+//               </a>
+//             </Link>
+//             {/* ... (other links) ... */}
+//           </Box>
+//         </Box>
+//       </Drawer>
+//     </Box>
+//   );
+// };
+
 export const Navbar = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
   return (
     <Box sx={{ background: "", height: "" }}>
       <Grid container>
@@ -551,7 +810,7 @@ export const Navbar = () => {
             fontWeight: "600",
           }}
         >
-          {/* {"itsa@gmail.com"} */}
+          {"itsa@gmail.com"}
         </Grid>
         <Grid
           item
@@ -579,7 +838,10 @@ export const Navbar = () => {
             </a>
           </Link>
 
-          <IconButton sx={{ display: { xs: "flex", lg: "none" } }}>
+          <IconButton
+            onClick={toggleDrawer}
+            sx={{ display: { xs: "flex", md: "none" } }}
+          >
             <Box
               sx={{
                 width: "35px",
@@ -602,7 +864,7 @@ export const Navbar = () => {
               width: "100%",
             }}
           >
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <Typography
                   sx={{
@@ -614,7 +876,7 @@ export const Navbar = () => {
                   About Us
                 </Typography>
               </a>
-            </Link>
+            </Link> */}
 
             <Link href="/membership">
               <a>
@@ -743,9 +1005,6 @@ export const Navbar = () => {
             </Link>
 
             <Box className="btn-container">
-              {/* <button className='btn btn--shockwave is-active'>
-    Shockwave
-  </button> */}
               <Button
                 className="btn btn--shockwave is-active"
                 sx={{ color: "#eee", background: "#221E30" }}
@@ -756,6 +1015,438 @@ export const Navbar = () => {
           </Box>
         </Grid>
       </Grid>
+
+      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
+        <Box
+          id="drawer"
+          sx={{
+            width: "250px",
+            height: "100%",
+            background: "white",
+            // color: "#eee",
+            // padding: "20px",
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              backgroundImage: 'url("/reps/2.png")',
+              height: "120px",
+              // backgroundImage:
+              // 'url("https://img.icons8.com/?size=50&id=120374&format=png")',
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              // marginBottom: "20px",
+            }}
+          />
+          <Box>
+            <Box
+              sx={{
+                display: { xs: "flex" },
+                flexDirection: "column",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              {/* <Link style={{ width: "100%" }} href="/">
+                <a style={{ width: "100%" , display:'flex' , alignItems:'center' }}>
+                <Box sx={{ width:'35px' , height:'35' , background:'red' }} />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    About Us
+                  </Typography>
+                </a>
+              </Link> */}
+
+              <Link href="/membership">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage:
+                        'url("/nav-icons/icons8-membership.gif")',
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Membership
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/events">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-event.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Events
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/resources">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-code.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Resources
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/projects">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-project.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Projects
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/committee">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-team.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Committee
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/news">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-news.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Blog/News
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/contact">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-phone.gif")',
+
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Contact
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/faq">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-faq.gif")',
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    FAQ
+                  </Typography>
+                </a>
+              </Link>
+
+              <Link href="/gallery">
+                <a
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "35px",
+                      height: "35px",
+                      backgroundImage: 'url("/nav-icons/icons8-gallery.gif")',
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                      // color: "white",
+                      padding: "12px 21px",
+                      width: "100%",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        background: "#eee",
+                        color: "#221E30",
+                      },
+                    }}
+                  >
+                    Gallery
+                  </Typography>
+                </a>
+              </Link>
+
+              <Box className="btn-container">
+                <Button
+                  className="btn btn--shockwave is-active"
+                  sx={{
+                    color: "#eee",
+                    background: "#221E30",
+                    marginTop: "21px",
+                  }}
+                >
+                  JOIN
+                </Button>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Drawer>
     </Box>
   );
 };
