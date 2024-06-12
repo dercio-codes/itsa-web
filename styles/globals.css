@@ -103,7 +103,7 @@ a {
   box-sizing: border-box;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  height: 10px !important;
+  height: 0.3rem !important;
 }
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
@@ -399,7 +399,18 @@ section {
   background: linear-gradient(105deg, #6e99e6, #093c94);
   padding-top: 80px;
   padding-bottom: 40px;
+  animation: gradientAnimation 5s ease-in-out infinite;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 /*END FOOTER SOCIAL DESIGN*/
 .single_footer {
 }

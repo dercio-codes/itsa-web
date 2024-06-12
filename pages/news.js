@@ -132,10 +132,18 @@ const News = () => {
                         overflow: "hidden",
                         WebkitBoxOrient: "vertical",
                         WebkitLineClamp: 2,
+                        fontSize: "1.2rem",
+                        "@media (max-width: 600px)": {
+                          fontSize: "1.2rem",
+                        },
+                        "@media (max-width: 400px)": {
+                          fontSize: "1rem",
+                        },
                       }}
                     >
                       {newsItem.title}
                     </Typography>
+
                     <Typography
                       variant="body2"
                       color="textSecondary"
@@ -146,9 +154,33 @@ const News = () => {
                         overflow: "hidden",
                         WebkitBoxOrient: "vertical",
                         WebkitLineClamp: 3,
+                        margin: "12px 0",
+                        "@media (max-width: 600px)": {
+                          fontSize: "0.8rem",
+                        },
+                        "@media (max-width: 400px)": {
+                          fontSize: "0.6rem",
+                        },
                       }}
                     >
                       {newsItem.description}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      noWrap={false}
+                      sx={{
+                        display: "-webkit-box",
+                        overflow: "hidden",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 3,
+                        fontSize: "0.8rem",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {"By Author : ITSA Student Council"}
                     </Typography>
                   </CardContent>
                 </Card>

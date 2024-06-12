@@ -18,258 +18,138 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <Box sx={{ background: "" }}>
-      <Navbar />
-
+    <Box
+      sx={{
+        backgroundImage: "url(/circuit-board.svg)",
+        backgroundAttachment: "fixed",
+        "-webkit-background-size": "cover",
+        backgroundSize: "contain",
+        backdropFilter: "blur(1px)",
+      }}
+    >
       <Box
         sx={{
-          height: "100vh",
-          backgroundImage: "url('/banner.gif')",
-          // backgroundAttahcment: "fixed",
-          // backgroundSize: "cover",
+          background: "rgb(255,255,255,0.90)",
+          // background:
+          // "linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0.7) 100%)",
         }}
       >
-        {" "}
+        <Navbar />
+
         <Box
           sx={{
-            height: "100vh",
-            background: "rgb(255,255,255)",
-            background:
-              "linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.7) 100%)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
+            height: { xs: "70vh", lg: "100vh" },
+            backgroundImage: "url('/banner.gif')",
+            // backgroundAttahcment: "fixed",
+            // backgroundSize: "cover",
           }}
         >
+          {" "}
           <Box
             sx={{
-              height: "100vh",
+              height: { xs: "70vh", lg: "100vh" },
+
               background: "rgb(255,255,255)",
               background:
-                "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)",
+                "linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.7) 100%)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-            }}
-          >
-            <Typography
-              className="header-font"
-              sx={{
-                textAlign: "center",
-                margin: "0 auto",
-                color: "white",
-                fontSize: "50px",
-              }}
-            >
-              Our Vision{" "}
-            </Typography>
-            <Typography
-              // className="header-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"
-              sx={{
-                textAlign: "center",
-                fontWeight: "300",
-                margin: "12px auto",
-                color: "white",
-                fontSize: { xs: "20px", lg: "24px" },
-                width: { xs: "80%", lg: "50%" },
-              }}
-            >
-              Our vision as ITSA is to provide a platform for IT students to
-              come together,forstering a culture of technological innovation at
-              UFS,especially among students from the Computer Science and
-              Informatics Department{" "}
-            </Typography>
-            <Button
-              className="heartbeat"
-              sx={{
-                color: "white",
-                border: "1px solid white",
-                padding: "12px 32px",
-                "&:hover": {
-                  background: "white",
-                  color: "#222",
-                },
-              }}
-            >
-              {" "}
-              JOIN
-            </Button>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          // height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#221E30",
-        }}
-      >
-        <Grid container>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "",
-              minHeight: { xs: "50vh", lg: "80vh" },
-              margin: "21px 0",
             }}
           >
             <Box
               sx={{
-                width: "70%",
+                height: { xs: "70vh", lg: "100vh" },
+
+                background: "rgb(255,255,255)",
+                background:
+                  "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: { xs: "center", lg: "flex-start" },
+                alignItems: "center",
                 justifyContent: "center",
               }}
             >
               <Typography
                 className="header-font"
                 sx={{
-                  textAlign: { xs: "center", lg: "left" },
-                  margin: { xs: "12px auto", lg: "0" },
-                  color: "#221E30",
-
-                  // color: "white",
-                  fontSize: "30px",
+                  textAlign: "center",
+                  margin: "0 auto",
+                  color: "white",
+                  fontSize: "50px",
                 }}
               >
-                Are you an IT student ?{" "}
+                Our Vision{" "}
               </Typography>
-
               <Typography
-                className="header-font"
+                // className="header-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"// clssName"hedr-font"
                 sx={{
-                  textAlign: { xs: "center", lg: "left" },
-                  margin: { xs: "12px auto", lg: "0" },
-                  color: "#221E30",
-                  // color: "white",
-                  fontSize: "20px",
-                }}
-              >
-                We are looking for you{" "}
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: "100%",
-                  margin: "12px 0",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    background: "#221E30",
-                    opacity: "0.5",
-                  }}
-                />
-                <Divider sx={{ color: "#221E30", width: "70%" }} />
-              </Box>
-
-              <Typography
-                // className="header-font"
-                sx={{
-                  textAlign: { xs: "center", lg: "left" },
+                  textAlign: "center",
                   fontWeight: "300",
-                  margin: { xs: "12px auto", lg: "12px 0" },
-                  color: "#221E30",
-                  // color: "white",
-                  fontSize: { xs: "20px", lg: "16px" },
+                  margin: "12px auto",
+                  color: "white",
+                  fontSize: { xs: "20px", lg: "24px" },
+                  width: { xs: "80%", lg: "50%" },
                 }}
               >
-                ITSA brings you closer to your field where you feel a sense of
-                belonging on campus.
+                Our vision as ITSA is to provide a platform for IT students to
+                come together,forstering a culture of technological innovation
+                at UFS,especially among students from the Computer Science and
+                Informatics Department{" "}
               </Typography>
-              <Box
+              <Button
+                className="heartbeat"
                 sx={{
-                  display: "flex",
-                  justifyContent: { xs: "center", lg: "flex-end" },
-                  width: "100%",
+                  color: "white",
+                  border: "1px solid white",
+                  padding: "12px 32px",
+                  "&:hover": {
+                    background: "white",
+                    color: "#222",
+                  },
                 }}
               >
-                <Box className="btn-container">
-                  {/* <button className='btn btn--shockwave is-active'>
-    Shockwave
-  </button> */}
-
-                  <Button
-                    className="btn btn--shockwave is-active"
-                    variant="outlined"
-                    // className="heartbeat"
-                    sx={{
-                      borderRadius: "21px",
-                      color: "#221E30",
-                      border: "1px dashed #221E30",
-                      padding: "12px !important",
-                      // "&:hover": {
-                      //   color: "#221E30",
-                      //   background: "white",
-                      // },
-                    }}
-                  >
-                    Get Involved Now
-                  </Button>
-                </Box>
-              </Box>
+                {" "}
+                JOIN
+              </Button>
             </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "",
-              minHeight: { xs: "50vh", lg: "80vh" },
-            }}
-          >
-            <Box
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            // height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#221E30",
+          }}
+        >
+          <Grid container>
+            <Grid
+              item
+              xs={12}
+              md={6}
               sx={{
-                height: "350px",
-                width: "350px",
-                backgroundImage: "url('/cog.png')",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              minHeight: "30vh",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Paper
-              elevation={2}
-              sx={{
-                minHeight: "150px",
-                width: { xs: "65%", lg: "500px" },
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                padding: "32px",
+                justifyContent: "center",
+                background: "",
+                minHeight: { xs: "50vh", lg: "80vh" },
+                margin: "21px 0",
               }}
             >
-              <Box>
+              <Box
+                sx={{
+                  width: "70%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: { xs: "center", lg: "flex-start" },
+                  justifyContent: "center",
+                }}
+              >
                 <Typography
                   className="header-font"
                   sx={{
@@ -278,50 +158,140 @@ export default function Home() {
                     color: "#221E30",
 
                     // color: "white",
-                    fontSize: "20px",
+                    fontSize: "30px",
                   }}
                 >
-                  21 June 2024{" "}
+                  Are you an IT student ?{" "}
                 </Typography>
+
                 <Typography
-                  // className="header-font"
+                  className="header-font"
                   sx={{
                     textAlign: { xs: "center", lg: "left" },
                     margin: { xs: "12px auto", lg: "0" },
                     color: "#221E30",
                     // color: "white",
-                    fontSize: "16px",
+                    fontSize: "20px",
                   }}
                 >
-                  We are looking for you to discuss AI and how it is affecting
-                  our current lives and how you should not fear as a Computer
-                  Science student{" "}
+                  We are looking for you{" "}
                 </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                    margin: "12px 0",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "20px",
+                      height: "20px",
+                      borderRadius: "50%",
+                      background: "#221E30",
+                      opacity: "0.5",
+                    }}
+                  />
+                  <Divider sx={{ color: "#221E30", width: "70%" }} />
+                </Box>
+
+                <Typography
+                  // className="header-font"
+                  sx={{
+                    textAlign: { xs: "center", lg: "left" },
+                    fontWeight: "300",
+                    margin: { xs: "12px auto", lg: "12px 0" },
+                    color: "#221E30",
+                    // color: "white",
+                    fontSize: { xs: "20px", lg: "16px" },
+                  }}
+                >
+                  ITSA brings you closer to your field where you feel a sense of
+                  belonging on campus.
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: { xs: "center", lg: "flex-end" },
+                    width: "100%",
+                  }}
+                >
+                  <Box className="btn-container">
+                    {/* <button className='btn btn--shockwave is-active'>
+    Shockwave
+  </button> */}
+
+                    <Button
+                      className="btn btn--shockwave is-active"
+                      variant="outlined"
+                      // className="heartbeat"
+                      sx={{
+                        borderRadius: "21px",
+                        color: "#221E30",
+                        border: "1px dashed #221E30",
+                        padding: "12px !important",
+                        // "&:hover": {
+                        //   color: "#221E30",
+                        //   background: "white",
+                        // },
+                      }}
+                    >
+                      Get Involved Now
+                    </Button>
+                  </Box>
+                </Box>
               </Box>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              padding: "32px 0",
-              background: "rgba(0,0,150,0.1)",
-              margin: "32px 0 0 0",
-            }}
-          >
-            <Grid container>
-              <Grid
-                item
-                xs={12}
-                lg={6}
-                sx={{ display: "flex", justifyContent: "center" }}
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "",
+                minHeight: { xs: "50vh", lg: "80vh" },
+              }}
+            >
+              <Box
+                sx={{
+                  height: "350px",
+                  width: "350px",
+                  backgroundImage: "url('/cog.png')",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sx={{
+                minHeight: "30vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Paper
+                elevation={2}
+                sx={{
+                  minHeight: "150px",
+                  width: { xs: "65%", lg: "500px" },
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "32px",
+                }}
               >
-                <Box sx={{ width: "75%" }}>
+                <Box>
                   <Typography
                     className="header-font"
                     sx={{
                       textAlign: { xs: "center", lg: "left" },
-                      margin: { xs: "8px auto", lg: "0" },
+                      margin: { xs: "12px auto", lg: "0" },
                       color: "#221E30",
 
                       // color: "white",
@@ -334,66 +304,101 @@ export default function Home() {
                     // className="header-font"
                     sx={{
                       textAlign: { xs: "center", lg: "left" },
-                      margin: { xs: "8px auto", lg: "0" },
+                      margin: { xs: "12px auto", lg: "0" },
                       color: "#221E30",
-
                       // color: "white",
                       fontSize: "16px",
                     }}
                   >
-                    Stay Up To Date With Our Newletter and Updates Regarding
-                    ITSA{" "}
+                    We are looking for you to discuss AI and how it is affecting
+                    our current lives and how you should not fear as a Computer
+                    Science student{" "}
                   </Typography>
                 </Box>
-              </Grid>
-              <Grid item xs={12} lg={6}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: { xs: "center", lg: "flex-start" },
-                    alignItems: "center",
-                  }}
+              </Paper>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sx={{
+                padding: "32px 0",
+                background: "rgba(0,0,150,0.1)",
+                margin: "32px 0 0 0",
+              }}
+            >
+              <Grid container>
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  sx={{ display: "flex", justifyContent: "center" }}
                 >
-                  <TextField sx={{ width: { xs: "200px", lg: "300px" } }} />
-                  <Button
+                  <Box sx={{ width: "75%" }}>
+                    <Typography
+                      className="header-font"
+                      sx={{
+                        textAlign: { xs: "center", lg: "left" },
+                        margin: { xs: "8px auto", lg: "0" },
+                        color: "#221E30",
+
+                        // color: "white",
+                        fontSize: "20px",
+                      }}
+                    >
+                      21 June 2024{" "}
+                    </Typography>
+                    <Typography
+                      // className="header-font"
+                      sx={{
+                        textAlign: { xs: "center", lg: "left" },
+                        margin: { xs: "8px auto", lg: "0" },
+                        color: "#221E30",
+
+                        // color: "white",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Stay Up To Date With Our Newletter and Updates Regarding
+                      ITSA{" "}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Box
                     sx={{
-                      background: "#221E30",
-                      color: "white",
-                      padding: "16px",
+                      display: "flex",
+                      justifyContent: { xs: "center", lg: "flex-start" },
+                      alignItems: "center",
                     }}
                   >
-                    Join List
-                  </Button>
-                </Box>
+                    <TextField sx={{ width: { xs: "200px", lg: "300px" } }} />
+                    <Button
+                      sx={{
+                        background: "#221E30",
+                        color: "white",
+                        padding: "16px",
+                      }}
+                    >
+                      Join List
+                    </Button>
+                  </Box>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              // background: "red",
-              height: "250px",
-              backgroundImage: "url('/banner.gif')",
-              // backgroundImage:
-              // "url(https://img.freepik.com/free-vector/realistic-technology-particle-background_23-2148413634.jpg?t=st=1715326464~exp=1715330064~hmac=abe6be62318ab5a27a2c187297eb73fa93d9b7966a1ec07d6f50edacea85af8d&w=740)",
-              // "url('https://images.pexels.com/photos/19895718/pexels-photo-19895718/free-photo-of-woman-working-on-computer-hardware.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-              backgroundSize: "cover",
-              backgroundAttachment: "fixed",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          >
-            <Box
+            <Grid
+              item
+              xs={12}
               sx={{
+                // background: "red",
                 height: "250px",
-                background: "rgb(255,255,255)",
-                background:
-                  "linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.7) 100%)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
+                backgroundImage: "url('/banner.gif')",
+                // backgroundImage:
+                // "url(https://img.freepik.com/free-vector/realistic-technology-particle-background_23-2148413634.jpg?t=st=1715326464~exp=1715330064~hmac=abe6be62318ab5a27a2c187297eb73fa93d9b7966a1ec07d6f50edacea85af8d&w=740)",
+                // "url('https://images.pexels.com/photos/19895718/pexels-photo-19895718/free-photo-of-woman-working-on-computer-hardware.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+                backgroundSize: "cover",
+                backgroundAttachment: "fixed",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
               }}
             >
               <Box
@@ -401,21 +406,34 @@ export default function Home() {
                   height: "250px",
                   background: "rgb(255,255,255)",
                   background:
-                    "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)",
+                    "linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.7) 100%)",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
-              ></Box>
-            </Box>
-          </Grid>
+              >
+                <Box
+                  sx={{
+                    height: "250px",
+                    background: "rgb(255,255,255)",
+                    background:
+                      "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                ></Box>
+              </Box>
+            </Grid>
 
-          <EventsComponent />
-          <OurReps text="white" bg="#221E30" />
-          <ContactForm />
-          <Footer />
-        </Grid>
+            <EventsComponent />
+            <OurReps text="white" bg="#221E30" />
+            <ContactForm />
+            <Footer />
+          </Grid>
+        </Box>
       </Box>
     </Box>
   );
@@ -675,13 +693,13 @@ export default function Home() {
 // };
 
 export const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(true);
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
   return (
-    <Box sx={{ background: "", height: "" }}>
+    <Box sx={{ background: "white", height: "" }}>
       <Grid container>
         <Grid
           item
@@ -735,13 +753,21 @@ export const Navbar = () => {
               }}
             >
               <Typography
-                sx={{ margin: "0 21px", display: { xs: "none", md: "flex" } }}
+                sx={{
+                  margin: "0 21px",
+                  fontSize: "0.7rem",
+                  display: { xs: "none", md: "flex" },
+                }}
               >
                 Home
               </Typography>
 
               <Typography
-                sx={{ margin: "0 21px", display: { xs: "none", md: "flex" } }}
+                sx={{
+                  margin: "0 21px",
+                  fontSize: "0.7rem",
+                  display: { xs: "none", md: "flex" },
+                }}
               >
                 Contact ICT
               </Typography>
@@ -756,7 +782,7 @@ export const Navbar = () => {
                 <TextField
                   sx={{
                     width: { xs: "75%", md: "200px", lg: "300px" },
-                    display: { xs: "none", sm: "none", md: "flex" },
+                    display: { xs: "none", sm: "flex", md: "flex" },
                     // scale: "0.9",
                   }}
                 />
@@ -811,7 +837,11 @@ export const Navbar = () => {
             fontWeight: "600",
           }}
         >
-          {"itsa@gmail.com"}
+          <Link href="mailto:itsa@gmail.com">
+            <a style={{ width: "100%", fontSize: "0.7rem", color: "white" }}>
+              {"itsa@gmail.com"}
+            </a>
+          </Link>
         </Grid>
         <Grid
           item
@@ -1907,7 +1937,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link href="/faq">
-                      <a>Frequently Aked Questions</a>
+                      <a>Frequently Asked Questions</a>
                     </Link>
                   </li>
                   <li>
@@ -2014,8 +2044,15 @@ export const Footer = () => {
             <Grid item xs={12}>
               <Box className="row">
                 <Box className="col-lg-12 col-sm-12 col-xs-12">
-                  <p className="copyright">
-                    Copyright © 2024 <a href="#">Atomus Dev</a>.
+                  <p className="copyright" style={{ fontSize: "0.7rem" }}>
+                    {/* Copyright © 2024 <a href="#">Atomus Dev</a>. */}
+                    Copyright © 2021 - 2024 <a href="#">Atomus Dev</a>{" "}
+                    Operating Company. All Rights Reserved.
+                    <br /> The Atomus Dev word mark is a registered trademark of
+                    Atomus Dev Operating Company, Proprietary Limited in the RSA
+                    and other countries.
+                    <br /> The Atomus logo is a registered trademark of{" "}
+                    <a href="#">Atomus Dev</a>, Proprietary Limited in the RSA.
                   </p>
                 </Box>
               </Box>

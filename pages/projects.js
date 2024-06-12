@@ -4,6 +4,7 @@ import { Box, Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Divider } from "@mui/material";
 import { Navbar, Footer } from ".";
+import Image from "next/image";
 
 const Events = () => {
   const [open, setOpen] = useState(false);
@@ -177,7 +178,7 @@ const Events = () => {
           }}
         >
           <Paper>
-            <img
+            <Image
               src={selectedImage ? selectedImage.original : ""}
               alt="Zoomed Image"
               style={{ maxWidth: "100%", maxHeight: "90vh" }}

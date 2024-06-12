@@ -95,17 +95,10 @@ export default function Contact() {
       <Navbar />
       <Box
         sx={{
-          //   background: "",
           height: "250px",
           backgroundImage:
             "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyBtMaFdswKheh-K8syaREnGz6e0_JR1PD8XP43H7Y2A&s')",
-          // "url('https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?w=740&t=st=1716792519~exp=1716793119~hmac=00400c04fa97158efe185d7211675907752670395e0c845521d058f607e57869')",
-          // backgroundImage:
-          // "url(https://img.freepik.com/free-vector/realistic-technology-particle-background_23-2148413634.jpg?t=st=1715326464~exp=1715330064~hmac=abe6be62318ab5a27a2c187297eb73fa93d9b7966a1ec07d6f50edacea85af8d&w=740)",
-          // "url('https://images.pexels.com/photos/19895718/pexels-photo-19895718/free-photo-of-woman-working-on-computer-hardware.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
           backgroundSize: "contain",
-          // backgroundAttachment: "fixed",
-          // backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       >
@@ -136,29 +129,38 @@ export default function Contact() {
         </Box>
       </Box>
       <Grid container>
-        <Grid item xs={12} sx={{ minHeight: "100vh", padding: "32px" }}>
-          <Grid container>
+        <Grid
+          item
+          xs={12}
+          sx={{ minHeight: "100vh", padding: { xs: "0 32px", lg: "32px" } }}
+        >
+          <Grid
+            container
+            // sx={{
+            //   display: "flex",
+            //   flexDirection: { xs: "column-reverse", md: "row " },
+            // }}
+          >
             <Grid
               item
               xs={12}
-              lg={6}
+              md={6}
               sx={{
-                // background: "#221E30",
                 display: "flex",
                 alignItems: "flex-end",
               }}
             >
               <Box
                 sx={{
-                  //   margin: "21px",
                   height: "750px",
                   width: "90%",
                   backgroundImage: "url('/circuit-primary.svg')",
-                  // "url('https://ouch-cdn2.icons8.com/2ovcKXYBoyvHlUuBgcgcwfroV2E2pqoZL6AlsNzA7Lw/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvODYv/NTUxN2E0NzEtNTBj/My00ZTc4LTk2ZjQt/ODIyNTJmZjgzMmFm/LnN2Zw.gif')",
                   backgroundSize: "cover",
                   backgroundPosition: "right",
                   backgroundRepeat: "no-repeat",
-                  margin: "21px auto",
+                  margin: "0 auto",
+                  // display: { xs: "none", lg: "flex" },
+                  transform: { xs: "rotate(-90deg)", md: "", lg: "" },
                 }}
               />
             </Grid>
@@ -169,14 +171,12 @@ export default function Contact() {
                   textAlign: { xs: "center" },
                   margin: { xs: "12px auto", lg: "0" },
                   color: "#221E30",
-                  // color: "white",
                   fontSize: { xs: "30px", lg: "40px" },
                 }}
               >
                 Membership{" "}
               </Typography>
               <Typography
-                // className="header-font"
                 sx={{
                   textAlign: { xs: "center" },
                   margin: { xs: "2px auto", lg: "0" },
@@ -221,7 +221,7 @@ export default function Contact() {
                 />
               </Box>
               <Grid container>
-                <Grid item xs={12} sm={6} sx={{ padding: "0 12px 0 0" }}>
+                <Grid item xs={12} md={6} sx={{ padding: "0 12px 0 0" }}>
                   <Typography
                     // className="header-font"
                     sx={{
@@ -235,7 +235,7 @@ export default function Contact() {
                   <TextField
                     placeholder={`Informatic`}
                     fullWidth={true}
-                    sx={{ margin: "12px 0" }}
+                    sx={{ margin: "12px 0", background: "white" }}
                   />
                   <Typography
                     // className="header-font"
@@ -250,7 +250,7 @@ export default function Contact() {
                   <TextField
                     placeholder={`Technology`}
                     fullWidth={true}
-                    sx={{ margin: "12px 0" }}
+                    sx={{ margin: "12px 0", background: "white" }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} sx={{ padding: "0 0 0 12px" }}>
@@ -267,7 +267,7 @@ export default function Contact() {
                   <TextField
                     placeholder={`ITSA@gmail.com`}
                     fullWidth={true}
-                    sx={{ margin: "12px 0" }}
+                    sx={{ margin: "12px 0", background: "white" }}
                   />
                   <Typography
                     // className="header-font"
@@ -282,7 +282,7 @@ export default function Contact() {
                   <TextField
                     placeholder={`011 - 123 - 4567`}
                     fullWidth={true}
-                    sx={{ margin: "12px 0" }}
+                    sx={{ margin: "12px 0", background: "white" }}
                   />
                 </Grid>
               </Grid>
@@ -300,7 +300,7 @@ export default function Contact() {
                 <TextField
                   placeholder={`Majoring in Computer Science`}
                   fullWidth={true}
-                  sx={{ margin: "12px 0" }}
+                  sx={{ margin: "12px 0", background: "white" }}
                 />
                 <Typography
                   // className="header-font"
@@ -316,7 +316,7 @@ export default function Contact() {
                   type="date"
                   placeholder={`2025`}
                   fullWidth={true}
-                  sx={{ margin: "12px 0" }}
+                  sx={{ margin: "12px 0", background: "white" }}
                 />
               </Grid>
               <Typography
@@ -335,7 +335,7 @@ export default function Contact() {
                 rows={5}
                 placeholder={`Availability for meetings and events 
 Skills or experience relevant to the association's activities`}
-                sx={{ margin: "12px 0" }}
+                sx={{ margin: "12px 0", background: "white" }}
               />
               <Box
                 sx={{
