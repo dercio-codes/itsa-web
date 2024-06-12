@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="ITSA, UFS, IT students, technological innovation, collaboration, Computer Science, Informatics, technology, innovation, students, association"
         />
+        <link rel="icon" href="https://www.itsa-web.vercel.app/reps/2.png" />
       </Head>
       <Helmet>
         <meta property="og:title" content="ITSA - Home" />
