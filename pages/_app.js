@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>ITSA - {"Home"}</title>
+        <title>ITSA - {"UFS Student Association"}</title>
         <meta
           name="description"
           content="ITSA is a platform for IT students at UFS to come together, fostering a culture of technological innovation and collaboration."
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="https://itsa-web.vercel.app/reps/2.png" />
       </Head>
       <Helmet>
-        <meta property="og:title" content="ITSA - Home" />
+        <meta property="og:title" content="ITSA - UFS Student Association" />
         <meta
           property="og:description"
           content="ITSA is a platform for IT students at UFS to come together, fostering a culture of technological innovation and collaboration."
