@@ -11,7 +11,7 @@ import {
   Box,
 } from "@mui/material";
 import { blogPosts } from "../blog";
-import { Navbar } from "..";
+import { Navbar , Footer} from "..";
 
 // const BlogPost = () => {
 //   const router = useRouter();
@@ -194,6 +194,7 @@ const ArticleList = () => {
           ))}
         </Grid>
       </Container>
+            <Footer/>
     </Box>
   );
 };
