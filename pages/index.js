@@ -11,7 +11,7 @@ import {
   IconButton,
   Drawer,
 } from "@mui/material";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Facebook, Instagram, Twitter , Email } from "@mui/icons-material";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
@@ -1995,7 +1995,7 @@ export const Footer = () => {
                           },
                         }}
                       >
-                        <Facebook
+                        <Email
                           sx={{
                             width: "35px",
                             height: "35px",
@@ -2006,30 +2006,7 @@ export const Footer = () => {
                       </IconButton>
                     </a>
                   </li>
-                  <li>
-                    <a href="https://twitter.com/ufsweb?lang=en">
-                      <IconButton
-                        sx={{
-                          border: "1px solid white",
-                          color: "white",
-                          margin: "0 12px 0 21px",
-                          "&:hover": {
-                            background: "white",
-                            color: "#3060b4",
-                          },
-                        }}
-                      >
-                        <Twitter
-                          sx={{
-                            width: "35px",
-                            height: "35px",
-                            borderRadius: "50%",
-                            color: "inherit",
-                          }}
-                        />
-                      </IconButton>
-                    </a>
-                  </li>
+            
                   <li>
                     <a href="https://www.instagram.com/ufsweb/?hl=en">
                       <IconButton
