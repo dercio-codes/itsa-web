@@ -712,7 +712,7 @@ export const Navbar = () => {
               height: { xs: "75px", lg: "75px" },
               width: { xs: "75px", md: "180px" },
               backgroundImage:
-                "url('https://www.ufs.ac.za/images/librariesprovider5/ufs_redesign_2021/ufsheaderlogo.svg?sfvrsn=15b37820_2')",
+                "url('/qwaqwa-logo.jpg')",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "left",
