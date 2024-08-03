@@ -15,6 +15,7 @@ import { Facebook, Instagram, Twitter , Email } from "@mui/icons-material";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
+import { reps } from "./../app-data/reps" 
 
 export default function Home() {
   return (
