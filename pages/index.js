@@ -2233,6 +2233,12 @@ const reps = [
     image: "/reps/Hope-Motchesane.jpg",
     role: "President",
   },
+    {
+    repName: "Ntokozo",
+    repSurname: " Langa",
+    role: "Vice-President",
+    image: "/reps/Ntokozo-Langa.jpg",
+  },
   {
     repName: "Kamohelo",
     repSurname: " Motaung",
@@ -2240,28 +2246,28 @@ const reps = [
     image: "/reps/Kamohelo-Motaung.jpg",
   },
   {
-    repName: "Letseka",
-    repSurname: " Radebe",
-    image: "/reps/Letseka-Radebe.jpg",
-    role: "First-Year Representative",
-  },
-  {
     repName: "Lindele",
     repSurname: " Nyambe",
     image: "/reps/Lindele-Nyambe.jpg",
     role: "Communications/Liason",
   },
-  {
-    repName: "Ntokozo",
-    repSurname: " Langa",
-    role: "Vice-President",
-    image: "/reps/Ntokozo-Langa.jpg",
+    {
+    repName: "Yandile",
+    repSurname: " Myeni",
+    image: "/reps/Yandile-Myeni.jpg",
+    role: "Secretary",
   },
   {
     repName: "Ntokozo",
     repSurname: " Mashinini",
     image: "/reps/Ntokozo-Mashinini.jpg",
     role: "Database administrator",
+  },
+      {
+    repName: "Letseka",
+    repSurname: " Radebe",
+    image: "/reps/Letseka-Radebe.jpg",
+    role: "First-Year Representative",
   },
   {
     repName: "Phenyo",
@@ -2274,12 +2280,6 @@ const reps = [
     repSurname: " Mthembu",
     image: "/reps/Simphiwe-Mthembu.jpg",
     role: "Additional Committee Member",
-  },
-  {
-    repName: "Yandile",
-    repSurname: " Myeni",
-    image: "/reps/Yandile-Myeni.jpg",
-    role: "Secretary",
   },
 ];
 
