@@ -872,7 +872,7 @@ export const Navbar = () => {
               backgroundImage: 'url("/logo.png")',
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: { xs: "left" },
+                  backgroundPosition: { xs: "left" , md:"center" },
                 }}
               />
             </a>
