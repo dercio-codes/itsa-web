@@ -98,6 +98,7 @@ export default function Home() {
                 at UFS,especially among students from the Computer Science and
                 Informatics Department{" "}
               </Typography>
+                <Link href="/contact">
               <Button
                 className="heartbeat"
                 sx={{
@@ -113,6 +114,8 @@ export default function Home() {
                 {" "}
                 JOIN
               </Button>
+                  </Link>
+                  
             </Box>
           </Box>
         </Box>
@@ -1036,12 +1039,15 @@ export const Navbar = () => {
             </Link>
 
             <Box className="btn-container">
+                                    <Link href="/contact">
               <Button
                 className="btn btn--shockwave is-active"
                 sx={{ color: "#eee", background: "#221E30" }}
               >
                 JOIN
               </Button>
+                  </Link>
+                  
             </Box>
           </Box>
         </Grid>
@@ -1463,6 +1469,8 @@ export const Navbar = () => {
               </Link>
 
               <Box className="btn-container">
+                <Link href="/contact">
+                      
                 <Button
                   className="btn btn--shockwave is-active"
                   sx={{
@@ -1473,6 +1481,8 @@ export const Navbar = () => {
                 >
                   JOIN
                 </Button>
+                    </Link>
+                    
               </Box>
             </Box>
           </Box>
