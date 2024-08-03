@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://itsa-web.vercel.app/reps/2.png"
+          content="https://itsa-web.vercel.app/logo.png"
         />
       </Helmet>
       <Component {...pageProps} />
