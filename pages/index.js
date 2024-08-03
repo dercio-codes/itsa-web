@@ -863,7 +863,7 @@ export const Navbar = () => {
                 sx={{
                   width: "75px",
                   height: "75px",
-                  backgroundImage: 'url("/reps/2.png")',
+              backgroundImage: 'url("/logo.png")',
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: { xs: "left" },
@@ -1067,7 +1067,7 @@ export const Navbar = () => {
           <Box
             sx={{
               width: "100%",
-              backgroundImage: 'url("/reps/2.png")',
+              backgroundImage: 'url("/logo.png")',
               height: "120px",
               // backgroundImage:
               // 'url("https://img.icons8.com/?size=50&id=120374&format=png")',
