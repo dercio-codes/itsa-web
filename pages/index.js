@@ -755,6 +755,8 @@ export const Navbar = () => {
                 // background: "yellow",
               }}
             >
+                  <Link href="https://www.ufs.ac.za/ict">
+              
               <Typography
                 sx={{
                   margin: "0 21px",
@@ -764,7 +766,9 @@ export const Navbar = () => {
               >
                 Home
               </Typography>
+                  </Link>
 
+                  <Link href="https://www.ufs.ac.za/ict">
               <Typography
                 sx={{
                   margin: "0 21px",
@@ -774,6 +778,8 @@ export const Navbar = () => {
               >
                 Contact ICT
               </Typography>
+                  </Link>
+                  
               <Box
                 sx={{
                   display: "flex",
