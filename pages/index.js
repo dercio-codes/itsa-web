@@ -1983,7 +1983,7 @@ export const Footer = () => {
               <div className="social_profile">
                 <ul style={{ background: "pink" }}>
                   <li>
-                    <a href="https://www.facebook.com/UFSweb/">
+                    <Link href="mailto:itsa@gmail.com">
                       <IconButton
                         sx={{
                           border: "1px solid white",
@@ -2004,11 +2004,11 @@ export const Footer = () => {
                           }}
                         />
                       </IconButton>
-                    </a>
+                    </Link>
                   </li>
             
                   <li>
-                    <a href="https://www.instagram.com/ufsweb/?hl=en">
+                    <Link href="https://www.instagram.com/ufsweb/?hl=en">
                       <IconButton
                         sx={{
                           border: "1px solid white",
@@ -2029,7 +2029,7 @@ export const Footer = () => {
                           }}
                         />
                       </IconButton>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
