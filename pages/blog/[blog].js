@@ -108,14 +108,16 @@ const ArticleList = () => {
           ></Box>
         </Box>
       </Box>
-      <Container maxWidth="lg" sx={{ py: 6 }}>
+      <Container maxWidth="xl" sx={{ py: 6 }}>
         <Box sx={{ p: { xs: "21px 30px", lg: "21px 60px" } }}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link color="inherit" href="/">
               Home
             </Link>
-            <Typography color="textPrimary">Blog</Typography>
-            <Link color="inherit" href="/">
+             <Link color="inherit" href="/">
+              Blog
+            </Link>
+            <Link color="inherit" href={blog}>
               <Typography color="textPrimary">{blog}</Typography>
             </Link>
           </Breadcrumbs>
