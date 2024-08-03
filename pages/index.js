@@ -867,7 +867,7 @@ export const Navbar = () => {
             <a>
               <Box
                 sx={{
-                  width: "75px",
+                  width: "120px",
                   height: "75px",
               backgroundImage: 'url("/logo.png")',
                   backgroundSize: "contain",
